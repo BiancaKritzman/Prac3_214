@@ -6,3 +6,5 @@ Core topics: Observer, Composite, UML sequence diagrams, Doxygen, Git/GitHub
 Runs with 'make'
 
 # Using Push Observer
+
+# Notice in UML is an ENUM

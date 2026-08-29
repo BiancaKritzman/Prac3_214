@@ -1,6 +1,6 @@
-#include "MusicFestival.h"
+#include "MusicFestivalObserver.h"
 
 //leaf
-class Security: public MusicFestival {
-    //calls open and close gates
+class Security: public MusicFestivalObserver {
+void describe() override;
 };

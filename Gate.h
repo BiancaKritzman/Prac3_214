@@ -1,5 +1,7 @@
 #include "Stage.h"
 
 class Gate: public Stage {
-    //implement open and close
+    public:
+        void open() override;
+        void close() override;
 };

@@ -1,3 +1,6 @@
+#ifndef GATE_H
+#define GATE_H
+
 #include "Stage.h"
 
 class Gate: public Stage {
@@ -5,3 +8,5 @@ class Gate: public Stage {
         void open() override;
         void close() override;
 };
+
+#endif

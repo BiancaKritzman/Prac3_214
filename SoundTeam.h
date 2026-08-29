@@ -1,6 +1,12 @@
+#ifndef SOUNDTEAM_H
+#define SOUNDTEAM_H
+
 #include "MusicFestivalObserver.h"
 
 //leaf
 class SoundTeam: public MusicFestivalObserver {
-    void describe() override;
+    public:
+        void describe() override;
 };
+
+#endif

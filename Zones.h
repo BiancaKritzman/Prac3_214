@@ -1,6 +1,8 @@
+#ifndef ZONES_H
+#define ZONES_H
+
 #include "MusicFestivalObserver.h"
 #include <vector>
-#include <string>
 
 //leaf
 class Zones: public MusicFestivalObserver {
@@ -13,5 +15,6 @@ class Zones: public MusicFestivalObserver {
         void add(MusicFestivalObserver* child) override;
         void remove(MusicFestivalObserver* child) override;
         void describe() override;
-
 };
+
+#endif

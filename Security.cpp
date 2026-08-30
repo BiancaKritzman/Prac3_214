@@ -1,5 +1,30 @@
 #include "Security.h"
+#include "Zones.h"
+#include <iostream>
 
-void Security::describe(){
-    std::cout << guardCount <<  " security gaurds are in the " << currentZone << " perimeter.";
+Security::Security(int guards, std::string zone, Zones* root)
+    : gaurdCount(guards), currentZone(zone), eventRoot(root) {}
+
+void Security::dispatchToZone(std::string zoneName) {
+    currentZone = zoneName;
+    Notice notice{"CAPACITY_ALERT", zoneName, "Capacity threshold reached", 0, 0};
+    eventRoot->notify(notice);
+}
+
+void Security::update(const Notice& notice) {
+    if (notice.type == "Theft") {
+        dispatchToZone(notice.zoneID);
+    }
+}
+
+void Security::add(MusicFestivalObserver* child) {
+    std::cout << "Security is a leaf; add() has no effect.\n";
+}
+
+void Security::remove(MusicFestivalObserver* child) {
+    std::cout << "Security is a leaf; remove() has no effect.\n";
+}
+
+void Security::describe() {
+    std::cout << gaurdCount << " guards, currently at " << currentZone << "\n";
 }

@@ -55,6 +55,22 @@ int main() {
 
     Notice closeNotice{"CLOSE", "Music Zone", "End of day closure", 0, 0};
     mainZone->notify(closeNotice);
+
+        // ---- Demonstrating remaining required notice types (Task 3.3 / 8.1) ----
+    Notice openNotice{"OPEN", "Music Zone", "Gates opening for the day", 0, 0};
+    mainZone->notify(openNotice);
+
+    Notice scheduleNotice{"SCHEDULE_CHANGE", "Music Zone", "DJ Nova now on at 8PM", 0, 0};
+    mainZone->notify(scheduleNotice);
+
+    Notice weatherNotice{"WEATHER_ALERT", "Music Zone", "Storm approaching", 0, 0};
+    mainZone->notify(weatherNotice);
+
+    Notice evacuateNotice{"EVACUATE", "Music Zone", "Immediate evacuation required", 0, 0};
+    mainZone->notify(evacuateNotice);
+
+    Notice closeNotice{"CLOSE", "Music Zone", "End of day closure", 0, 0};
+    mainZone->notify(closeNotice);
     
 
     // ---- Clean shutdown ----

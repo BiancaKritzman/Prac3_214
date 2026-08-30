@@ -1,0 +1,17 @@
+#include "MusicFestivalObserver.h"
+#include "Notice.h"
+#include <string>
+
+//leaf
+class Merch: public MusicFestivalObserver {
+    private:
+        std::string artistName;
+
+    public:
+        Merch(std::string artist);
+        void requestAnnouncement();
+        void update(const Notice& notice) override;
+        void add(MusicFestivalObserver* child) override;
+        void remove(MusicFestivalObserver* child) override;
+        void describe() override;
+};

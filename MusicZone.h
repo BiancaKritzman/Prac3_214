@@ -4,9 +4,9 @@
 #include "Zones.h"
 
 class MusicZone : public Zones {
-    private:
-        std::string stageName;
     public:
+        std::string stageName;
+        MusicZone(std::string name);
         void describe() override;
 };
 

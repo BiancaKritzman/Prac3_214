@@ -7,6 +7,7 @@ class VendorZone : public Zones {
     private:
         int totalStalls;
     public:
+        VendorZone(std::string name, int stalls);
         void describe() override;
 };
 

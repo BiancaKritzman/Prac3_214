@@ -14,7 +14,7 @@ int main() {
     Zones* mainZone = new Zones("Main Grounds");
     MusicZone* musicZone = new MusicZone("Music Zone");
     VendorZone* vendorZone = new VendorZone("Vendor Zone", 4);
-    Gate* gate = new Gate();
+    Gate* gate = new Gate("DJ Nova");
     Merch* merchStand = new Merch("DJ Nova");
     SoundTeam* soundTeam = new SoundTeam(); 
     Security* security = new Security(5, "Main Grounds", mainZone);
@@ -39,6 +39,23 @@ int main() {
     musicZone->attach(merchStand);
 
     soundTeam->makeAnnouncement("New merch has arrived for DJ Nova!");
+
+        // ---- Demonstrating remaining required notice types (Task 3.3 / 8.1) ----
+    Notice openNotice{"OPEN", "Music Zone", "Gates opening for the day", 0, 0};
+    mainZone->notify(openNotice);
+
+    Notice scheduleNotice{"SCHEDULE_CHANGE", "Music Zone", "DJ Nova now on at 8PM", 0, 0};
+    mainZone->notify(scheduleNotice);
+
+    Notice weatherNotice{"WEATHER_ALERT", "Music Zone", "Storm approaching", 0, 0};
+    mainZone->notify(weatherNotice);
+
+    Notice evacuateNotice{"EVACUATE", "Music Zone", "Immediate evacuation required", 0, 0};
+    mainZone->notify(evacuateNotice);
+
+    Notice closeNotice{"CLOSE", "Music Zone", "End of day closure", 0, 0};
+    mainZone->notify(closeNotice);
+    
 
     // ---- Clean shutdown ----
     delete mainZone;     // cascades: deletes musicZone, vendorZone, gate, merchStand

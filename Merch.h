@@ -1,9 +1,13 @@
+#ifndef MERCH_H
+#define MERCH_H
+
 #include "MusicFestivalObserver.h"
+#include "VendorZone.h"
 #include "Notice.h"
 #include <string>
 
 //leaf
-class Merch: public MusicFestivalObserver {
+class Merch: public VendorZone {
     private:
         std::string artistName;
 
@@ -15,3 +19,5 @@ class Merch: public MusicFestivalObserver {
         void remove(MusicFestivalObserver* child) override;
         void describe() override;
 };
+
+#endif

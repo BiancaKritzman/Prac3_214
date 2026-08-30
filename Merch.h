@@ -1,13 +1,17 @@
-#ifndef MERCH_H
-#define MERCH_H
+#include "MusicFestivalObserver.h"
+#include "Notice.h"
+#include <string>
 
-#include "VendorZone.h"
-
-class Merch: public VendorZone {
+//leaf
+class Merch: public MusicFestivalObserver {
     private:
         std::string artistName;
-    public:
-        void requestAnnouncement();
-};
 
-#endif
+    public:
+        Merch(std::string artist);
+        void requestAnnouncement();
+        void update(const Notice& notice) override;
+        void add(MusicFestivalObserver* child) override;
+        void remove(MusicFestivalObserver* child) override;
+        void describe() override;
+};

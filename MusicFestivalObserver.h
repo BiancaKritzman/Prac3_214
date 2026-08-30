@@ -14,4 +14,10 @@ class MusicFestivalObserver {
         virtual void describe() = 0;
 };
 
+struct Notice {
+    std::string type;       // e.g. "Theft"
+    std::string zoneID; 
+    std::string detail;     // e.g. The artist's name or the stolen item
+};
+
 #endif

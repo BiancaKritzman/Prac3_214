@@ -1,38 +1,58 @@
-// just a shell of main for the observer functions for now, we can change it later :p
-
 #include "Zones.h"
 #include "MusicZone.h"
 #include "VendorZone.h"
 #include "Gate.h"
+#include "Stage.h"
 #include "Security.h"
 #include "SoundTeam.h"
 #include "Merch.h"
+#include "Refreshments.h"
+#include "Crowd.h"
+#include "Artist.h"
 #include "Notice.h"
 
 int main() {
-    // ---- Phase 1 (SD1): building the composite tree ----
+    // ---------------- SD1: build the composite tree ----------------
     Zones* mainZone = new Zones("Main Grounds");
-    MusicZone* musicZone = new MusicZone("Music Zone");
+    MusicZone* musicZone = new MusicZone("Music Zone", true);
     VendorZone* vendorZone = new VendorZone("Vendor Zone", 4);
-    Gate* gate = new Gate("DJ Nova");
-    Merch* merchStand = new Merch("DJ Nova");
-    SoundTeam* soundTeam = new SoundTeam(); 
+
+    Gate* gate = new Gate(true);
+    Stage* stage = new Stage("DJ Nova");
+    Crowd* crowd = new Crowd("Main Stage Crowd", true, 500);
+    Artist* artist = new Artist("Main Stage Artist", true, "DJ Nova", "House");
+
+    Merch* merchStand = new Merch("Merch Stall", 1, "DJ Nova");
+    Refreshments* refreshments = new Refreshments("Refreshments Stall", 1, "Festival Foods", 200);
+
+    SoundTeam* soundTeam = new SoundTeam();
     Security* security = new Security(5, "Main Grounds", mainZone);
 
     mainZone->add(musicZone);
-    musicZone->add(gate);
     mainZone->add(vendorZone);
+
+    musicZone->add(gate);
+    musicZone->add(stage);
+    musicZone->add(crowd);
+    musicZone->add(artist);
+
     vendorZone->add(merchStand);
+    vendorZone->add(refreshments);
 
-    // ---- Observer registration ----
+    // ---------------- Observer registration ----------------
     mainZone->attach(musicZone);
-    musicZone->attach(gate);
-    vendorZone->attach(merchStand);
+    mainZone->attach(vendorZone);
 
-    // ---- SD4 Phase 1: capacity alert cascades down to Gate ----
+    musicZone->attach(gate);
+    musicZone->attach(stage);
+
+    vendorZone->attach(merchStand);
+    vendorZone->attach(refreshments);
+
+    // ---------------- SD4 Phase 1: capacity alert cascade ----------------
     security->dispatchToZone("Music Zone");
 
-    // ---- SD4 Phase 2: runtime reassignment ----
+    // ---------------- SD4 Phase 2: runtime reassignment ----------------
     vendorZone->remove(merchStand);
     vendorZone->detach(merchStand);
     musicZone->add(merchStand);
@@ -40,42 +60,25 @@ int main() {
 
     soundTeam->makeAnnouncement("New merch has arrived for DJ Nova!");
 
-        // ---- Demonstrating remaining required notice types (Task 3.3 / 8.1) ----
-    Notice openNotice{"OPEN", "Music Zone", "Gates opening for the day", 0, 0};
-    mainZone->notify(openNotice);
+    // ---------------- Remaining notice types (Task 4.1 / material for SD2 & SD3) ----------------
+    Notice gateOpenNotice{"GATE_OPEN", "Music Zone", "Manual override: reopen gate", 0, 0};
+    mainZone->notify(gateOpenNotice);
 
-    Notice scheduleNotice{"SCHEDULE_CHANGE", "Music Zone", "DJ Nova now on at 8PM", 0, 0};
+    Notice gateCloseNotice{"GATE_CLOSE", "Music Zone", "Manual override: close gate", 0, 0};
+    mainZone->notify(gateCloseNotice);
+
+    Notice scheduleNotice{"BROADCAST_SCHEDULE", "Music Zone", "DJ Nova now on at 8PM", 0, 0};
     mainZone->notify(scheduleNotice);
 
-    Notice weatherNotice{"WEATHER_ALERT", "Music Zone", "Storm approaching", 0, 0};
-    mainZone->notify(weatherNotice);
+    Notice merchNotice{"ANNOUNCE_MERCH", "Music Zone", "DJ Nova", 0, 0};
+    mainZone->notify(merchNotice);
 
-    Notice evacuateNotice{"EVACUATE", "Music Zone", "Immediate evacuation required", 0, 0};
-    mainZone->notify(evacuateNotice);
+    Notice theftNotice{"REPORT_THEFT", "Vendor Zone", "Reported at Refreshments stall", 0, 0};
+    security->update(theftNotice);
 
-    Notice closeNotice{"CLOSE", "Music Zone", "End of day closure", 0, 0};
-    mainZone->notify(closeNotice);
-
-        // ---- Demonstrating remaining required notice types (Task 3.3 / 8.1) ----
-    Notice openNotice{"OPEN", "Music Zone", "Gates opening for the day", 0, 0};
-    mainZone->notify(openNotice);
-
-    Notice scheduleNotice{"SCHEDULE_CHANGE", "Music Zone", "DJ Nova now on at 8PM", 0, 0};
-    mainZone->notify(scheduleNotice);
-
-    Notice weatherNotice{"WEATHER_ALERT", "Music Zone", "Storm approaching", 0, 0};
-    mainZone->notify(weatherNotice);
-
-    Notice evacuateNotice{"EVACUATE", "Music Zone", "Immediate evacuation required", 0, 0};
-    mainZone->notify(evacuateNotice);
-
-    Notice closeNotice{"CLOSE", "Music Zone", "End of day closure", 0, 0};
-    mainZone->notify(closeNotice);
-    
-
-    // ---- Clean shutdown ----
-    delete mainZone;     // cascades: deletes musicZone, vendorZone, gate, merchStand
-    delete soundTeam;     // not part of the tree — owned by no one, deleted manually
+    // ---------------- Clean shutdown ----------------
+    delete mainZone;    // cascades through musicZone, vendorZone, and everything they still own
+    delete soundTeam;   // not part of the tree — owned by no one
     delete security;
 
     return 0;

@@ -13,6 +13,7 @@ class Stage: public MusicFestivalObserver {
         Stage(std::string artist);
         void add(MusicFestivalObserver* child) override;
         void remove(MusicFestivalObserver* child) override;
+        void update(const Notice& notice) override;
         void describe() override;
 };
 

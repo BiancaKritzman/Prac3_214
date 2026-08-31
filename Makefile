@@ -1,12 +1,9 @@
 CXX=g++ -std=c++11
 CFLAGS=-I. -Wall -Werror
 TARGET=engine
-OBJS= Pipeline.o Transformation.o TransformationRegistry.o \
-      Connector.o PostgresConnector.o RestApiConnector.o CsvConnector.o \
-      ConnectorFactory.o PostgresFactory.o RestApiFactory.o CsvFactory.o \
-      BatchPipeline.o StreamingPipeline.o \
-	  DeduplicateStep.o AggregateByRegionStep.o \
-      RunCheckpoint.o CheckpointManager.o main.o
+OBJS= Gate.o MusicFestivalObserver.o Security.o \
+      SoundTeam.o Stage.o Zones.o MusicZone.o VendorZone.o\
+	  Crowd.o Artist.o Refreshments.o Merch.o 
 
 all: $(OBJS)
 	$(CXX) $(CFLAGS) $(OBJS) -o $(TARGET)

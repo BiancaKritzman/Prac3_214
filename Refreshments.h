@@ -9,7 +9,9 @@ class Refreshments: public VendorZone {
         int refreshmentCount;
         std::string stolenItem;
     public:
+        Refreshments(std::string zoneName, int stalls, std::string vendorName, int initialCount);
         void reportTheft();
+        void describe() override;
 };
 
 #endif

@@ -1,3 +1,6 @@
+#ifndef SECURITY_H
+#define SECURTIY_H
+
 #include "MusicFestivalObserver.h"
 #include "Notice.h"
 #include <string>
@@ -19,3 +22,5 @@ class Security: public MusicFestivalObserver {
         void remove(MusicFestivalObserver* child) override;
         void describe() override;
 };
+
+#endif

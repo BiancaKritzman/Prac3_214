@@ -1,3 +1,6 @@
+#ifndef SOUNDTEAM_H
+#define SOUNDTEAM_H
+
 // SoundTeam.h
 #include "MusicFestivalObserver.h"
 #include "Notice.h"
@@ -19,3 +22,5 @@ class SoundTeam: public MusicFestivalObserver {
         void remove(MusicFestivalObserver* child) override;
         void describe() override;
 };
+
+#endif

@@ -9,6 +9,7 @@
 //Component 
 class MusicFestivalObserver {
     public:
+        virtual void update(const Notice& notice) = 0;
         virtual ~MusicFestivalObserver() = default;
         virtual void update(const Notice& notice) = 0;
         virtual void add(MusicFestivalObserver* child) = 0;

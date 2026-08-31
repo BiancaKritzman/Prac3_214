@@ -1,28 +1,34 @@
 #include "Gate.h"
 #include <iostream>
 
-Gate::Gate(std::string artist) : Stage(std::move(artist)) {}
+Gate::Gate(bool open) : isOpen(open) {}
 
-void Gate::open() {
-    std::cout << "Stand back!! The stage gate is opening.\n";
+void Gate::describe() {
+    if (isOpen) {
+        std::cout << "Stand back!! The stage gate is opening.\n";
+    }
+    else {
+        std::cout << "Capacity limits have been reached. Stage gate is closing.\n";
+    }
 }
 
-void Gate::close() {
-    std::cout << "Capacity limits have been reached. Stage gate is closing.\n";
+void Gate::setAndCall(bool open) {
+    isOpen = open;
+    describe();
 }
 
 void Gate::update(const Notice& notice) {
     if (notice.type == "CAPACITY_ALERT") {
         if (notice.currentCapacity >= notice.threshold) {
-            close();
+            setAndCall(false);
         } else {
-            open();
+            setAndCall(true);
         }
     } else if (notice.type == "OPEN") {
-        open();
+        setAndCall(true);
     } else if (notice.type == "CLOSE") {
-        close();
+        setAndCall(false);
     } else if (notice.type == "WEATHER_ALERT" || notice.type == "EVACUATE") {
-        close();   //stop addmitting attendees
+        setAndCall(false);   //stop addmitting attendees
     }
 }

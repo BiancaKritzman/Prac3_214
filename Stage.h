@@ -1,3 +1,6 @@
+#ifndef STAGE_H
+#define STAGE_H
+
 #include "MusicFestivalObserver.h"
 #include "Notice.h"
 #include <string>
@@ -8,9 +11,9 @@ class Stage: public MusicFestivalObserver {
         std::string currentArtist;
     public:
         Stage(std::string artist);
-        virtual void open() = 0;
-        virtual void close() = 0;
         void add(MusicFestivalObserver* child) override;
         void remove(MusicFestivalObserver* child) override;
         void describe() override;
 };
+
+#endif

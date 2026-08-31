@@ -8,10 +8,13 @@ Zones::~Zones() {
     for (MusicFestivalObserver* child : children) {
         delete child;
     }
+    children.clear();
 }
 
 void Zones::add(MusicFestivalObserver* child) {
-    children.push_back(child);
+    if (child != nullptr) {
+        children.push_back(child);
+    }
 }
 
 void Zones::remove(MusicFestivalObserver* child) {
@@ -41,4 +44,8 @@ void Zones::update(const Notice& notice) {
 
 void Zones::describe() {
     std::cout << "Zone: " << zoneName << "\n";
+    for (MusicFestivalObserver* child : children) {
+        std::cout << "  ";
+        child->describe(); //recursively implemented
+    }
 }

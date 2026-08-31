@@ -12,7 +12,7 @@ class Merch: public VendorZone {
         std::string artistName;
 
     public:
-        Merch(std::string artist);
+        Merch(std::string zoneName, int stalls, std::string artist);
         void requestAnnouncement();
         void update(const Notice& notice) override;
         void add(MusicFestivalObserver* child) override;

@@ -4,12 +4,10 @@
 SoundTeam::SoundTeam() : currentMessage(""), announcement(nullptr) {}
 
 void SoundTeam::update(const Notice& notice) {
-    if (notice.type == "SCHEDULE_CHANGE") {
+    if (notice.type == "BROADCAST_SCHEDULE") {
         makeAnnouncement("Schedule update: " + notice.detail);
-    } else if (notice.type == "WEATHER_ALERT") {
-        makeAnnouncement("Weather alert: please seek shelter in the covered areas.");
-    } else if (notice.type == "EVACUATE") {
-        makeAnnouncement("Evacuate now — please proceed calmly to the nearest exit.");
+    } else if (notice.type == "ANNOUNCE_MERCH") {
+        makeAnnouncement("New merch now available for " + notice.detail + " — head to the vendor zone!");
     }
 }
 

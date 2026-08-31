@@ -10,6 +10,6 @@ void Refreshments::describe() {
     std::cout << refreshmentCount << " refreshments are sold by " << vendorName << "\n";
 }
 
-void Refreshments::reportTheft() { //idk?
+void Refreshments::reportTheft() { 
     std::cout << "Theft reported at " << vendorName << "'s stall!\n";
 }

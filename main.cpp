@@ -9,7 +9,6 @@
 #include "Refreshments.h"
 #include "Crowd.h"
 #include "Artist.h"
-#include "Notice.h"
 
 int main() {
     // ---------------- SD1: build the composite tree ----------------

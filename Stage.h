@@ -2,7 +2,7 @@
 #define STAGE_H
 
 #include "MusicFestivalObserver.h"
-#include "Notice.h"
+//#include "Notice.h"
 #include <string>
 
 //leaf

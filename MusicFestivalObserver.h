@@ -1,15 +1,13 @@
 #ifndef MUSICFESTIVALOBSERVER_H
 #define MUSICFESTIVALOBSERVER_H
 
-
 #include <iostream>
 #include <string>
-#include "Notice.h"
+//#include "Notice.h"
 
 //Component 
 class MusicFestivalObserver {
     public:
-        virtual void update(const Notice& notice) = 0;
         virtual ~MusicFestivalObserver() = default;
         virtual void update(const Notice& notice) = 0;
         virtual void add(MusicFestivalObserver* child) = 0;

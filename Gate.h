@@ -2,7 +2,6 @@
 #define GATE_H
 
 #include "MusicFestivalObserver.h"
-#include "Notice.h"
 
 class Gate: public MusicFestivalObserver {
     private:
@@ -11,9 +10,10 @@ class Gate: public MusicFestivalObserver {
     public:
         Gate(bool open);
         void describe() override;
-
         void update(const Notice& notice) override;
-        void setAndCall(bool open); //our open() and close()
+        void add(MusicFestivalObserver* child) override;
+        void remove(MusicFestivalObserver* child) override;
+        void setAndCall(bool open);
 };
 
 #endif

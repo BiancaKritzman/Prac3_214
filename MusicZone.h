@@ -3,6 +3,11 @@
 
 #include "Zones.h"
 
+struct Performance{
+    std::string startTime;
+    std::string endTime;
+};
+
 class MusicZone : public Zones {
     private:
         Performance schedule;
@@ -13,11 +18,9 @@ class MusicZone : public Zones {
         void describe() override;
         std::string getSchedule() const;
         std::string getStageName() const;
+        void setSchedule(std::string startTime, std::string endTime);
        
 };
 
-struct Performance{
-    std::string startTime;
-    std::string endTime;
-};
+
 #endif

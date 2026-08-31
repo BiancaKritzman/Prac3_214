@@ -1,7 +1,7 @@
 #include "Merch.h"
-#include <iostream>
 
-Merch::Merch(std::string artist) : artistName(artist) {}
+Merch::Merch(std::string zoneName, int stalls, std::string artist) 
+    : VendorZone(std::move(zoneName), stalls), artistName(std::move(artist)) {}
 
 void Merch::requestAnnouncement() {
     std::cout << artistName << "'s merch is ready for sale.\n";

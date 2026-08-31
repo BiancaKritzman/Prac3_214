@@ -24,3 +24,4 @@ class Gate: public MusicFestivalObserver {
 };
 
 #endif
+

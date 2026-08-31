@@ -75,6 +75,10 @@ int main() {
     Notice theftNotice{"REPORT_THEFT", "Vendor Zone", "Reported at Refreshments stall", 0, 0};
     security->update(theftNotice);
 
+    // ---------------- Composite traversal/query (Task 8.1) ----------------
+    std::cout << "\n--- Full event structure ---\n";
+    mainZone->describe();
+
     // ---------------- Clean shutdown ----------------
     delete mainZone;    // cascades through musicZone, vendorZone, and everything they still own
     delete soundTeam;   // not part of the tree — owned by no one

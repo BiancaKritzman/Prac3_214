@@ -4,7 +4,11 @@
 		<Info bounds="Re:0.0,0.0,1893.0,893.0" diagramId="VMnS6gWD.AACAQxl" maximized="true" offsetX="0" offsetY="0"/>
 	</DiagramOpenInfos>
 	<DiagramLastActivated>
+<<<<<<< HEAD
 		<Diagram id="VMnS6gWD.AACAQxl" time="1788190632870"/>
+=======
+		<Diagram id="VMnS6gWD.AACAQxl" time="1788188987767"/>
+>>>>>>> f6866a80c6be8ea0a20d99aaf5225342eef7d2a4
 		<Diagram id="Use Case Statement" time="0"/>
 		<Diagram id="Use Case" time="0"/>
 		<Diagram id="User Story" time="0"/>

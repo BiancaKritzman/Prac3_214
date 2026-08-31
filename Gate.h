@@ -12,7 +12,6 @@
  */
 class Gate: public MusicFestivalObserver {
     private:
-        std::string gateID;
         bool isOpen;
     public:
 
@@ -66,4 +65,3 @@ class Gate: public MusicFestivalObserver {
 };
 
 #endif
-

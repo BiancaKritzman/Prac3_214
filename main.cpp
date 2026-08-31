@@ -87,3 +87,55 @@ int main() {
 
     return 0;
 }
+
+//Root destruction for 2.3
+
+// #include <iostream>
+// #include "Zones.h"
+// #include "VendorZone.h"
+// #include "MusicZone.h"
+// #include "Gate.h"
+// #include "Stage.h"
+// #include "Security.h"
+// #include "SoundTeam.h"
+
+// int main() {
+//     std::cout << "--- Constructing Composite Hierarchy ---\n";
+
+//     //root
+//     Zones* mainFestivalZone = new Zones("Main Festival Grounds");
+
+//     //composite
+//     VendorZone* vendorArea = new VendorZone("Vendor Alley", 12);
+//     MusicZone* mainStageZone = new MusicZone("Main Stage Zone", true);
+
+//     //leaves
+//     Gate* mainGate = new Gate(true);
+//     Stage* mainStage = new Stage("The Midnight Echoes");
+//     SoundTeam* soundTeam = new SoundTeam();
+//     Security* securityTeam = new Security(5, "Vendor Alley", mainFestivalZone);
+
+//     //build Subtrees
+//     vendorArea->add(securityTeam);      
+//     mainStageZone->add(mainStage);  
+//     mainStageZone->add(soundTeam);    
+
+//     //build Root Tree
+//     mainFestivalZone->add(vendorArea);    
+//     mainFestivalZone->add(mainStageZone); 
+//     mainFestivalZone->add(mainGate);     
+
+//     //observers (Non-owning references)
+//     mainFestivalZone->attach(mainGate);
+//     mainFestivalZone->attach(securityTeam);
+
+//     std::cout << "\n--- Describing Hierarchy ---\n";
+//     mainFestivalZone->describe();
+
+//     std::cout << "\n--- Destroying Root Composite ---\n";
+//     //recursively deletes vendorArea, mainStageZone, mainGate,
+//     //securityTeam, mainStage, and soundTeam exactly once.
+//     delete mainFestivalZone;
+
+//     return 0;
+// }

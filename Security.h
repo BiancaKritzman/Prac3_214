@@ -1,5 +1,5 @@
 #ifndef SECURITY_H
-#define SECURTIY_H
+#define SECURITY_H
 
 #include "MusicFestivalObserver.h"
 #include "Notice.h"

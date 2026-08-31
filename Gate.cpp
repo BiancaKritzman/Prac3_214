@@ -24,11 +24,9 @@ void Gate::update(const Notice& notice) {
         } else {
             setAndCall(true);
         }
-    } else if (notice.type == "OPEN") {
+    } else if (notice.type == "GATE_OPEN") {
         setAndCall(true);
-    } else if (notice.type == "CLOSE") {
+    } else if (notice.type == "GATE_CLOSE") {
         setAndCall(false);
-    } else if (notice.type == "THEFT_ALERT") {
-        setAndCall(false);   //stop addmitting attendees
     }
 }

@@ -2,7 +2,7 @@
 #define SECURITY_H
 
 #include "MusicFestivalObserver.h"
-#include "Notice.h"
+//#include "Notice.h"
 #include <string>
 
 class Zones;

@@ -3,7 +3,7 @@
 
 #include "MusicFestivalObserver.h"
 #include "VendorZone.h"
-#include "Notice.h"
+//#include "Notice.h"
 #include <string>
 
 //leaf

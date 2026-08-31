@@ -30,3 +30,11 @@ void Gate::update(const Notice& notice) {
         setAndCall(false);
     }
 }
+
+void Gate::add(MusicFestivalObserver* child) {
+    std::cout << "Gate is a leaf; add() has no effect.\n";
+}
+
+void Gate::remove(MusicFestivalObserver* child) {
+    std::cout << "Gate is a leaf; remove() has no effect.\n";
+}

@@ -10,8 +10,8 @@ class Refreshments: public VendorZone {
         std::string stolenItem;
         VendorZone* parentZone;
     public:
-        Refreshments(std::string zoneName, int stalls, std::string vendorName, int initialCount);
-        void Refreshments::reportTheft(std::string item);
+        Refreshments(std::string zoneName, int stalls, std::string vendorName, int initialCount, VendorZone* parent);
+        void reportTheft(std::string item);
         void describe() override;
 };
 

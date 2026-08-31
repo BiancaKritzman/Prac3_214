@@ -16,13 +16,13 @@ int main() {
     MusicZone* musicZone = new MusicZone("Music Zone", true);
     VendorZone* vendorZone = new VendorZone("Vendor Zone", 4);
 
-    Gate* gate = new Gate(true);
+    Gate* gate = new Gate(true, "G1");
     Stage* stage = new Stage("DJ Nova");
     Crowd* crowd = new Crowd("Main Stage Crowd", true, 500);
     Artist* artist = new Artist("Main Stage Artist", true, "DJ Nova", "House");
 
     Merch* merchStand = new Merch("Merch Stall", 1, "DJ Nova");
-    Refreshments* refreshments = new Refreshments("Refreshments Stall", 1, "Festival Foods", 200);
+    Refreshments* refreshments = new Refreshments("Refreshments Stall", 1, "Festival Foods", 200, vendorZone);
 
     SoundTeam* soundTeam = new SoundTeam();
     Security* security = new Security(5, "Main Grounds", mainZone);
@@ -74,7 +74,6 @@ int main() {
     mainZone->notify(merchNotice);
 
     Notice theftNotice{"REPORT_THEFT", "Vendor Zone", "Reported at Refreshments stall", 0, 0};
-Refreshments* refreshments = new Refreshments("Refreshments Stall", 1, "Festival Foods", 200, vendorZone);
 
 vendorZone->attach(security);
 vendorZone->attach(soundTeam);

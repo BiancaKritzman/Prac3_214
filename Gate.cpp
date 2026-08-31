@@ -1,7 +1,7 @@
 #include "Gate.h"
 #include <iostream>
 
-Gate::Gate(bool open, std::string id) : isOpen(open), gateID(id) {}
+Gate::Gate(bool open, std::string id) : gateID(id), isOpen(open) {}
 
 void Gate::describe() {
     if (isOpen) {

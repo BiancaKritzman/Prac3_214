@@ -2,6 +2,13 @@
 #define GATE_H
 
 #include "MusicFestivalObserver.h"
+struct Notice {
+    std::string type;
+    std::string zoneID;
+    std::string detail;
+    int currentCapacity = 0;
+    int threshold = 0;
+};
 
 class Gate: public MusicFestivalObserver {
     private:

@@ -19,6 +19,6 @@ void Stage::update(const Notice& notice) {
     if (notice.type == "REPORT_THEFT") {
         std::cout << "Security alert: Theft reported at the stage!\n";
     } else if (notice.type == "ANNOUNCE_MERCH") {
-        std::cout << "Merchandise alert: Check for stolen items at the stage!\n";
+        std::cout << "Merchandise alert: Merch is available for your favourite artist!\n";
     }
 }

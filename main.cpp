@@ -17,11 +17,11 @@ int main() {
     VendorZone* vendorZone = new VendorZone("Vendor Zone", 4);
 
     Gate* gate = new Gate(true, "G1");
-    Stage* stage = new Stage("DJ Nova");
+    Stage* stage = new Stage("Billie Eilish");
     Crowd* crowd = new Crowd("Main Stage Crowd", true, 500);
-    Artist* artist = new Artist("Main Stage Artist", true, "DJ Nova", "House");
+    Artist* artist = new Artist("Main Stage Artist", true, "Billie Eilish", "Pop");
 
-    Merch* merchStand = new Merch("Merch Stall", 1, "DJ Nova");
+    Merch* merchStand = new Merch("Merch Stall", 1, "Billie Eilish");
     Refreshments* refreshments = new Refreshments("Refreshments Stall", 1, "Festival Foods", 200, vendorZone);
 
     SoundTeam* soundTeam = new SoundTeam();
@@ -58,7 +58,7 @@ int main() {
     musicZone->add(merchStand);
     musicZone->attach(merchStand);
 
-    soundTeam->makeAnnouncement("New merch has arrived for DJ Nova!");
+    soundTeam->makeAnnouncement("New merch has arrived for Billie Eilish!");
 
     // more notice types
     Notice gateOpenNotice{"GATE_OPEN", "Music Zone", "Manual override: reopen gate", 0, 0};
@@ -67,10 +67,10 @@ int main() {
     Notice gateCloseNotice{"GATE_CLOSE", "Music Zone", "Manual override: close gate", 0, 0};
     mainZone->notify(gateCloseNotice);
 
-    Notice scheduleNotice{"BROADCAST_SCHEDULE", "Music Zone", "DJ Nova now on at 8PM", 0, 0};
+    Notice scheduleNotice{"BROADCAST_SCHEDULE", "Music Zone", "Billie Eilish now on at 8PM", 0, 0};
     mainZone->notify(scheduleNotice);
 
-    Notice merchNotice{"ANNOUNCE_MERCH", "Music Zone", "DJ Nova", 0, 0};
+    Notice merchNotice{"ANNOUNCE_MERCH", "Music Zone", "Billie Eilish", 0, 0};
     mainZone->notify(merchNotice);
 
     Notice theftNotice{"REPORT_THEFT", "Vendor Zone", "Reported at Refreshments stall", 0, 0};

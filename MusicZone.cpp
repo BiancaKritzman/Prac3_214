@@ -16,5 +16,5 @@ std::string MusicZone::getStageName() const {
     return stageName;
 }
 std::string MusicZone::getSchedule() const {
-    return "Performance from " + schedule.startTime + " to " + schedule.endTime + " at " + this->getStageName();
+    return "Performance from " + schedule.startTime + " to " + schedule.endTime + " at " + stageName;
 }

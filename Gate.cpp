@@ -28,7 +28,7 @@ void Gate::update(const Notice& notice) {
         setAndCall(true);
     } else if (notice.type == "CLOSE") {
         setAndCall(false);
-    } else if (notice.type == "WEATHER_ALERT" || notice.type == "EVACUATE") {
+    } else if (notice.type == "THEFT_ALERT") {
         setAndCall(false);   //stop addmitting attendees
     }
 }

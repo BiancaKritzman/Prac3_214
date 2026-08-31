@@ -10,6 +10,9 @@ void Refreshments::describe() {
     std::cout << refreshmentCount << " refreshments are sold by " << vendorName << "\n";
 }
 
-void Refreshments::reportTheft() { //idk?
-    std::cout << "Theft reported at " << vendorName << "'s stall!\n";
+void Refreshments::reportTheft(std::string item) {
+    stolenItem = item;
+    std::cout << "Theft reported at " << vendorName << "'s stall! Stolen item: " << item << "\n";
+    Notice notice{"REPORT_THEFT", "Vendor Zone", item, 0, 0};
+    parentZone->notify(notice);
 }

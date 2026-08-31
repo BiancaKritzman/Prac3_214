@@ -11,7 +11,7 @@
 #include "Artist.h"
 
 int main() {
-    // ---------------- SD1: build the composite tree ----------------
+    // build composite tree
     Zones* mainZone = new Zones("Main Grounds");
     MusicZone* musicZone = new MusicZone("Music Zone", true);
     VendorZone* vendorZone = new VendorZone("Vendor Zone", 4);
@@ -38,7 +38,7 @@ int main() {
     vendorZone->add(merchStand);
     vendorZone->add(refreshments);
 
-    // ---------------- Observer registration ----------------
+    // registering observers 
     mainZone->attach(musicZone);
     mainZone->attach(vendorZone);
     mainZone->attach(soundTeam);
@@ -49,10 +49,10 @@ int main() {
     vendorZone->attach(merchStand);
     vendorZone->attach(refreshments);
 
-    // ---------------- SD4 Phase 1: capacity alert cascade ----------------
+    // capacity alert notice
     security->dispatchToZone("Music Zone");
 
-    // ---------------- SD4 Phase 2: runtime reassignment ----------------
+    // runtime reassignment of merchStand from vendorZone to musicZone
     vendorZone->remove(merchStand);
     vendorZone->detach(merchStand);
     musicZone->add(merchStand);
@@ -60,7 +60,7 @@ int main() {
 
     soundTeam->makeAnnouncement("New merch has arrived for DJ Nova!");
 
-    // ---------------- Remaining notice types (Task 4.1 / material for SD2 & SD3) ----------------
+    // more notice types
     Notice gateOpenNotice{"GATE_OPEN", "Music Zone", "Manual override: reopen gate", 0, 0};
     mainZone->notify(gateOpenNotice);
 
@@ -74,13 +74,19 @@ int main() {
     mainZone->notify(merchNotice);
 
     Notice theftNotice{"REPORT_THEFT", "Vendor Zone", "Reported at Refreshments stall", 0, 0};
-    security->update(theftNotice);
+Refreshments* refreshments = new Refreshments("Refreshments Stall", 1, "Festival Foods", 200, vendorZone);
 
-    // ---------------- Composite traversal/query (Task 8.1) ----------------
+vendorZone->attach(security);
+vendorZone->attach(soundTeam);
+
+refreshments->reportTheft("A cooler of drinks");
+
+
+    // composite traversal and description
     std::cout << "\n--- Full event structure ---\n";
     mainZone->describe();
 
-    // ---------------- Clean shutdown ----------------
+    // deletes
     delete mainZone;    // cascades through musicZone, vendorZone, and everything they still own
     delete soundTeam;   // not part of the tree — owned by no one
     delete security;

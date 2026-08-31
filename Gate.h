@@ -9,7 +9,7 @@ class Gate: public MusicFestivalObserver {
         std::string gateID;
         bool isOpen;
     public:
-        Gate(bool open);
+        Gate(bool open, std::string id);
         void describe() override;
         void update(const Notice& notice) override;
         void add(MusicFestivalObserver* child) override;

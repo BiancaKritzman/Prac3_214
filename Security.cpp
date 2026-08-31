@@ -13,7 +13,9 @@ void Security::dispatchToZone(std::string zoneName) {
 
 void Security::update(const Notice& notice) {
     if (notice.type == "REPORT_THEFT") {
-        dispatchToZone(notice.zoneID);
+        currentZone = notice.zoneID;
+        std::cout << gaurdCount << " guards dispatched to " << currentZone
+                   << " following a theft report: " << notice.detail << "\n";
     }
 }
 

@@ -1,0 +1,163 @@
+\doxysection{Gate Class Reference}
+\hypertarget{classGate}{}\label{classGate}\index{Gate@{Gate}}
+
+
+Represents a festival entrance or stage gate.  
+
+
+
+
+{\ttfamily \#include $<$Gate.\+h$>$}
+
+
+
+Inheritance diagram for Gate\+:
+% FIG 0
+
+
+Collaboration diagram for Gate\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGate_ad2a1d6cc13043ab8bb2138dbe2eee3c1}{Gate}} (bool open)
+\begin{DoxyCompactList}\small\item\em Constructs a gate with an initial open/closed state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGate_ad32bf6834fc55c02ca81b06a4fbd0b28}{describe}} () override
+\begin{DoxyCompactList}\small\item\em Displays the current state of the gate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGate_abc0f6b290282fe6d6368f86161574b53}{update}} (const \mbox{\hyperlink{structNotice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Updates the gate state in response to a notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGate_a32d597c111b1c3b23ab4f151c9911a3f}{add}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child) override
+\begin{DoxyCompactList}\small\item\em Attempts to add a child component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGate_ab7cae14290f7be8c7e7f9de3d4c3c8a8}{remove}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child) override
+\begin{DoxyCompactList}\small\item\em Attempts to remove a child component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGate_af90df9c9f033d248c2b2de4fa8549fe7}{set\+And\+Call}} (bool open)
+\begin{DoxyCompactList}\small\item\em Changes the gate state and displays the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classMusicFestivalObserver_adf8f715c407bac325ad3fe87ef75c501}{\texorpdfstring{$\sim$}{\string~}\+Music\+Festival\+Observer}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroys the observer/component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a festival entrance or stage gate. 
+
+\doxylink{classGate}{Gate} is a leaf participant in the Composite pattern and an Observer that changes its open/closed state in response to capacity and gate control notifications. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGate_ad2a1d6cc13043ab8bb2138dbe2eee3c1}\label{classGate_ad2a1d6cc13043ab8bb2138dbe2eee3c1} 
+\index{Gate@{Gate}!Gate@{Gate}}
+\index{Gate@{Gate}!Gate@{Gate}}
+\doxysubsubsection{\texorpdfstring{Gate()}{Gate()}}
+{\footnotesize\ttfamily Gate\+::\+Gate (\begin{DoxyParamCaption}\item[{bool}]{open }\end{DoxyParamCaption})}
+
+
+
+Constructs a gate with an initial open/closed state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em open} & True if the gate should initially be open; false otherwise. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGate_a32d597c111b1c3b23ab4f151c9911a3f}\label{classGate_a32d597c111b1c3b23ab4f151c9911a3f} 
+\index{Gate@{Gate}!add@{add}}
+\index{add@{add}!Gate@{Gate}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Gate\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Attempts to add a child component. 
+
+\doxylink{classGate}{Gate} is a leaf and cannot contain children.
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Child component that cannot be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9b762788017473c1a1cdb351e9485a8f}{Music\+Festival\+Observer}}.
+
+\Hypertarget{classGate_ad32bf6834fc55c02ca81b06a4fbd0b28}\label{classGate_ad32bf6834fc55c02ca81b06a4fbd0b28} 
+\index{Gate@{Gate}!describe@{describe}}
+\index{describe@{describe}!Gate@{Gate}}
+\doxysubsubsection{\texorpdfstring{describe()}{describe()}}
+{\footnotesize\ttfamily void Gate\+::describe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays the current state of the gate. 
+
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9c0146e5e85f1de6552638175e1b35dd}{Music\+Festival\+Observer}}.
+
+\Hypertarget{classGate_ab7cae14290f7be8c7e7f9de3d4c3c8a8}\label{classGate_ab7cae14290f7be8c7e7f9de3d4c3c8a8} 
+\index{Gate@{Gate}!remove@{remove}}
+\index{remove@{remove}!Gate@{Gate}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Gate\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Attempts to remove a child component. 
+
+\doxylink{classGate}{Gate} is a leaf and cannot contain children.
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Child component that cannot be removed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a0279b1d7fa47dff9168ae2a875c9bef1}{Music\+Festival\+Observer}}.
+
+\Hypertarget{classGate_af90df9c9f033d248c2b2de4fa8549fe7}\label{classGate_af90df9c9f033d248c2b2de4fa8549fe7} 
+\index{Gate@{Gate}!setAndCall@{setAndCall}}
+\index{setAndCall@{setAndCall}!Gate@{Gate}}
+\doxysubsubsection{\texorpdfstring{setAndCall()}{setAndCall()}}
+{\footnotesize\ttfamily void Gate\+::set\+And\+Call (\begin{DoxyParamCaption}\item[{bool}]{open }\end{DoxyParamCaption})}
+
+
+
+Changes the gate state and displays the result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em open} & True to open the gate; false to close it. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGate_abc0f6b290282fe6d6368f86161574b53}\label{classGate_abc0f6b290282fe6d6368f86161574b53} 
+\index{Gate@{Gate}!update@{update}}
+\index{update@{update}!Gate@{Gate}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Gate\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the gate state in response to a notification. 
+
+Capacity alerts may close or open the gate depending on the reported capacity, while explicit gate notifications directly control its state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notification received from the festival subject. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9d131241ead8e93ac720fb5926b83e8f}{Music\+Festival\+Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Gate.\+h\item 
+Gate.\+cpp\end{DoxyCompactItemize}

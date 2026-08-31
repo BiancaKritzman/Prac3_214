@@ -1,0 +1,133 @@
+\doxysection{Music\+Festival\+Observer Class Reference}
+\hypertarget{classMusicFestivalObserver}{}\label{classMusicFestivalObserver}\index{MusicFestivalObserver@{MusicFestivalObserver}}
+
+
+Common interface for festival components that can receive notifications.  
+
+
+
+
+{\ttfamily \#include $<$Music\+Festival\+Observer.\+h$>$}
+
+
+
+Inheritance diagram for Music\+Festival\+Observer\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classMusicFestivalObserver_adf8f715c407bac325ad3fe87ef75c501}{\texorpdfstring{$\sim$}{\string~}\+Music\+Festival\+Observer}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroys the observer/component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMusicFestivalObserver_a9b762788017473c1a1cdb351e9485a8f}{add}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child)=0
+\begin{DoxyCompactList}\small\item\em Adds a child component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMusicFestivalObserver_a0279b1d7fa47dff9168ae2a875c9bef1}{remove}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child)=0
+\begin{DoxyCompactList}\small\item\em Removes a child component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMusicFestivalObserver_a9d131241ead8e93ac720fb5926b83e8f}{update}} (const \mbox{\hyperlink{structNotice}{Notice}} \&notice)=0
+\begin{DoxyCompactList}\small\item\em Receives a notification from a subject. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMusicFestivalObserver_a9c0146e5e85f1de6552638175e1b35dd}{describe}} ()=0
+\begin{DoxyCompactList}\small\item\em Displays a description of the component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Common interface for festival components that can receive notifications. 
+
+This class acts as the Component participant in the Composite design pattern. Both leaf objects and composite \doxylink{classZones}{Zones} can be treated uniformly through this interface.
+
+It also provides the interface used by the Observer pattern for receiving festival notifications. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMusicFestivalObserver_adf8f715c407bac325ad3fe87ef75c501}\label{classMusicFestivalObserver_adf8f715c407bac325ad3fe87ef75c501} 
+\index{MusicFestivalObserver@{MusicFestivalObserver}!````~MusicFestivalObserver@{\texorpdfstring{$\sim$}{\string~}MusicFestivalObserver}}
+\index{````~MusicFestivalObserver@{\texorpdfstring{$\sim$}{\string~}MusicFestivalObserver}!MusicFestivalObserver@{MusicFestivalObserver}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MusicFestivalObserver()}{\string~MusicFestivalObserver()}}
+{\footnotesize\ttfamily virtual Music\+Festival\+Observer\+::\texorpdfstring{$\sim$}{\string~}\+Music\+Festival\+Observer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroys the observer/component. 
+
+The destructor is virtual so that derived objects can be safely destroyed through a \doxylink{classMusicFestivalObserver}{Music\+Festival\+Observer} pointer. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMusicFestivalObserver_a9b762788017473c1a1cdb351e9485a8f}\label{classMusicFestivalObserver_a9b762788017473c1a1cdb351e9485a8f} 
+\index{MusicFestivalObserver@{MusicFestivalObserver}!add@{add}}
+\index{add@{add}!MusicFestivalObserver@{MusicFestivalObserver}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily virtual void Music\+Festival\+Observer\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Adds a child component. 
+
+Design decision\+: The add operation is included in the common Component interface so that both Composite objects and leaf objects can be treated uniformly. Composite objects use this operation to add children, while leaf objects implement it as a no-\/op because they cannot contain children.
+
+This allows clients to work with both leaves and composites through the same \doxylink{classMusicFestivalObserver}{Music\+Festival\+Observer} interface without needing to know the concrete type of the object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Component to add. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classGate_a32d597c111b1c3b23ab4f151c9911a3f}{Gate}}, \mbox{\hyperlink{classMerch_a5031d50800194c014f9daad1a309f748}{Merch}}, \mbox{\hyperlink{classSecurity_adbd49033bcef70c67fe6b4ea7e73a2b3}{Security}}, \mbox{\hyperlink{classSoundTeam_a148895830d5ebdb0c4c222d4a4fc6ad0}{Sound\+Team}}, \mbox{\hyperlink{classStage_accdc1b373aece7bc3eadf252ef5185c4}{Stage}}, and \mbox{\hyperlink{classZones_a1789fb0d77a93744031e5b3b2abdd257}{Zones}}.
+
+\Hypertarget{classMusicFestivalObserver_a9c0146e5e85f1de6552638175e1b35dd}\label{classMusicFestivalObserver_a9c0146e5e85f1de6552638175e1b35dd} 
+\index{MusicFestivalObserver@{MusicFestivalObserver}!describe@{describe}}
+\index{describe@{describe}!MusicFestivalObserver@{MusicFestivalObserver}}
+\doxysubsubsection{\texorpdfstring{describe()}{describe()}}
+{\footnotesize\ttfamily virtual void Music\+Festival\+Observer\+::describe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Displays a description of the component. 
+
+Derived classes provide their own description. 
+
+Implemented in \mbox{\hyperlink{classArtist_a2acc635960dfd1075720507d920d25eb}{Artist}}, \mbox{\hyperlink{classCrowd_a841ef7a71f428f75235be412373888a1}{Crowd}}, \mbox{\hyperlink{classGate_ad32bf6834fc55c02ca81b06a4fbd0b28}{Gate}}, \mbox{\hyperlink{classMerch_a0b4058538202d46282bdf3e110d4e9f6}{Merch}}, \mbox{\hyperlink{classMusicZone_ad58ae81334b274e65700b36a22d78072}{Music\+Zone}}, \mbox{\hyperlink{classRefreshments_aef4ef51468c1b7567ba54265df8d2a53}{Refreshments}}, \mbox{\hyperlink{classSecurity_a5204db99fa9c633cff78db84d915e22b}{Security}}, \mbox{\hyperlink{classSoundTeam_a15c680bd1b0f4c5e397d44684299a80d}{Sound\+Team}}, \mbox{\hyperlink{classStage_ac4415425b09e1ad9171c467c87b69d46}{Stage}}, \mbox{\hyperlink{classVendorZone_a4590a87d8f6912b69effe8285ce32ad1}{Vendor\+Zone}}, and \mbox{\hyperlink{classZones_aebda60b1e52c5f7cece4a27fad306148}{Zones}}.
+
+\Hypertarget{classMusicFestivalObserver_a0279b1d7fa47dff9168ae2a875c9bef1}\label{classMusicFestivalObserver_a0279b1d7fa47dff9168ae2a875c9bef1} 
+\index{MusicFestivalObserver@{MusicFestivalObserver}!remove@{remove}}
+\index{remove@{remove}!MusicFestivalObserver@{MusicFestivalObserver}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily virtual void Music\+Festival\+Observer\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Removes a child component. 
+
+Design decision\+: Leaf classes implement this operation even though they cannot have children. This maintains a consistent interface for all components in the Composite hierarchy. A leaf therefore provides a no-\/op implementation rather than requiring clients to check whether an object is a leaf or composite before calling \doxylink{classMusicFestivalObserver_a0279b1d7fa47dff9168ae2a875c9bef1}{remove()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Component to remove. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classGate_ab7cae14290f7be8c7e7f9de3d4c3c8a8}{Gate}}, \mbox{\hyperlink{classMerch_a4d554ba13698348fdd433d4e675efdaa}{Merch}}, \mbox{\hyperlink{classSecurity_aa03c2d0917e1a0e4f54f62a6e5aeb400}{Security}}, \mbox{\hyperlink{classSoundTeam_a08e801aa0fab0f893338c79b8474d5e0}{Sound\+Team}}, \mbox{\hyperlink{classStage_ad89a887619ba127d8b00e2268305a390}{Stage}}, and \mbox{\hyperlink{classZones_a3aa8ac7e59267683f737925c1d7bafbd}{Zones}}.
+
+\Hypertarget{classMusicFestivalObserver_a9d131241ead8e93ac720fb5926b83e8f}\label{classMusicFestivalObserver_a9d131241ead8e93ac720fb5926b83e8f} 
+\index{MusicFestivalObserver@{MusicFestivalObserver}!update@{update}}
+\index{update@{update}!MusicFestivalObserver@{MusicFestivalObserver}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Music\+Festival\+Observer\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Receives a notification from a subject. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notification containing information about the event. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classGate_abc0f6b290282fe6d6368f86161574b53}{Gate}}, \mbox{\hyperlink{classMerch_a7fa5174f44e5e02dfa1e2959383adbbc}{Merch}}, \mbox{\hyperlink{classSecurity_a481717d8a9d76b8e77bb03c573f5b914}{Security}}, \mbox{\hyperlink{classSoundTeam_afe43d47594be5bfe5e84048ec7c328c6}{Sound\+Team}}, \mbox{\hyperlink{classStage_a601c6d05986c698d0a54621375c69947}{Stage}}, and \mbox{\hyperlink{classZones_a2fbec6d438a2ceb3595b71cfd9d90f4e}{Zones}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Music\+Festival\+Observer.\+h\end{DoxyCompactItemize}

@@ -13,14 +13,16 @@
 class Gate: public MusicFestivalObserver {
     private:
         bool isOpen;
+        std::string gateID;
     public:
 
         /**
          * @brief Constructs a gate with an initial open/closed state.
          *
          * @param open True if the gate should initially be open; false otherwise.
+         * @param id The ID to uniquely identify the gate.
          */
-        Gate(bool open);
+        Gate(bool open, std::string id);
 
         /**
          * @brief Displays the current state of the gate.

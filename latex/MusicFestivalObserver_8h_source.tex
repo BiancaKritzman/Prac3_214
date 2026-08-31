@@ -1,0 +1,42 @@
+\doxysection{Music\+Festival\+Observer.\+h}
+\hypertarget{MusicFestivalObserver_8h_source}{}\label{MusicFestivalObserver_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MUSICFESTIVALOBSERVER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MUSICFESTIVALOBSERVER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structNotice}{Notice}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ std::string\ type;\ \ \ \ \ \ \ \textcolor{comment}{//\ e.g.\ "{}Theft"{}}}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ zoneID;\ }
+\DoxyCodeLine{00016\ \ \ \ \ std::string\ detail;\ \ \ \ \ \textcolor{comment}{//\ e.g.\ The\ artist's\ name\ or\ the\ stolen\ item}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ currentCapacity;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ threshold;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{structNotice_a43651602a469b10f138af4d2ecf70f49}{Notice}}(std::string\ type,\ std::string\ zoneID,\ std::string\ detail,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentCapacity\ =\ 0,\ \textcolor{keywordtype}{int}\ threshold\ =\ 0)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ :\ type(std::move(type)),\ zoneID(std::move(zoneID)),\ detail(std::move(detail)),}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ currentCapacity(currentCapacity),\ threshold(threshold)\ \{\}}
+\DoxyCodeLine{00033\ \ \ \ \ }
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classMusicFestivalObserver_adf8f715c407bac325ad3fe87ef75c501}{\string~MusicFestivalObserver}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMusicFestivalObserver_a9b762788017473c1a1cdb351e9485a8f}{add}}(\mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}*\ child)\ =\ 0;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMusicFestivalObserver_a0279b1d7fa47dff9168ae2a875c9bef1}{remove}}(\mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}*\ child)\ =\ 0;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMusicFestivalObserver_a9d131241ead8e93ac720fb5926b83e8f}{update}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structNotice}{Notice}}\&\ notice)\ =\ 0;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMusicFestivalObserver_a9c0146e5e85f1de6552638175e1b35dd}{describe}}()\ =\ 0;}
+\DoxyCodeLine{00101\ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

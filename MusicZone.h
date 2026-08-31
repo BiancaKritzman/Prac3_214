@@ -4,9 +4,10 @@
 #include "Zones.h"
 
 class MusicZone : public Zones {
+    private:
+        bool isLive;
     public:
-        std::string stageName;
-        MusicZone(std::string name);
+        MusicZone(std::string name, bool isLive);
         void describe() override;
 };
 

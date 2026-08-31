@@ -1,9 +1,13 @@
 #include "MusicZone.h"
 
+MusicZone::MusicZone(std::string name, bool isLive) : Zones(std::move(name)), isLive(isLive){}
 
-MusicZone::MusicZone(std::string name) : Zones(std::move(name)) {}
-void MusicZone::describe() { std::cout << "MusicZone\n"; }
 
 void MusicZone::describe(){
-    std::cout << "Stage: " << stageName << "\n";
+    if (isLive) {
+        std::cout << "Stage is live.\n";
+    }
+    else {
+        std::cout << "Stage will be live soon.\n";
+    }
 }

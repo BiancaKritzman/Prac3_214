@@ -1,4 +1,4 @@
-#ifndef MUSICFESITVALOBSERVER_H
+#ifndef MUSICFESTIVALOBSERVER_H
 #define MUSICFESTIVALOBSERVER_H
 
 
@@ -11,7 +11,6 @@ class MusicFestivalObserver {
     public:
         virtual void update(const Notice& notice) = 0;
         virtual ~MusicFestivalObserver() = default;
-        virtual void update(const Notice& notice) = 0;
         virtual void add(MusicFestivalObserver* child) = 0;
         virtual void remove(MusicFestivalObserver* child) = 0;
         virtual void describe() = 0;

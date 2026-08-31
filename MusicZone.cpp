@@ -1,6 +1,6 @@
 #include "MusicZone.h"
 
-MusicZone::MusicZone(std::string name, bool isLive) : Zones(std::move(name)), isLive(isLive){}
+MusicZone::MusicZone(std::string stageName, bool isLive) : Zones(std::move(stageName)), isLive(isLive){}
 
 
 void MusicZone::describe(){
@@ -10,4 +10,11 @@ void MusicZone::describe(){
     else {
         std::cout << "Stage will be live soon.\n";
     }
+}
+
+std::string MusicZone::getStageName() const {
+    return stageName;
+}
+std::string MusicZone::getSchedule() const {
+    return "Performance from " + schedule.startTime + " to " + schedule.endTime + " at " + stageName;
 }

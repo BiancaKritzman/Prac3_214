@@ -7,6 +7,7 @@ class Artist : public MusicZone {
     private:
         std::string genre;
         std::string artistName; 
+
     public:
         Artist(std::string zoneName, bool isLive, std::string artistName, std::string genre);
 

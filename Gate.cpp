@@ -5,10 +5,10 @@ Gate::Gate(bool open) : isOpen(open) {}
 
 void Gate::describe() {
     if (isOpen) {
-        std::cout << "Stand back!! The stage gate is opening.\n";
+        std::cout << "Stand back!! The stage gate " << gateID << "is opening.\n";
     }
     else {
-        std::cout << "Capacity limits have been reached. Stage gate is closing.\n";
+        std::cout << "Capacity limits have been reached. Stage gate" << gateID <<" is closing.\n";
     }
 }
 

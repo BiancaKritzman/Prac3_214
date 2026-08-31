@@ -41,6 +41,7 @@ int main() {
     // ---------------- Observer registration ----------------
     mainZone->attach(musicZone);
     mainZone->attach(vendorZone);
+    mainZone->attach(soundTeam);
 
     musicZone->attach(gate);
     musicZone->attach(stage);

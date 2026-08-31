@@ -1,5 +1,9 @@
 #include "VendorZone.h"
+#include <iostream>
 
-void VendorZone::describe(){
-    std::cout << "There are " << totalStalls << " vendor stalls\n";
+VendorZone::VendorZone(std::string name, int stalls)
+    : Zones(std::move(name)), totalStalls(stalls) {}
+
+void VendorZone::describe() {
+    std::cout << "VendorZone with " << totalStalls << " stalls\n";
 }

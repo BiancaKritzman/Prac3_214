@@ -3,6 +3,8 @@ Core topics: Observer, Composite, UML sequence diagrams, Doxygen, Git/GitHub
 
 # Members
 Bianca Kritzman
+Lillian Muller
+Hayley Nel
 
 # Makefile
 Runs with 'make'

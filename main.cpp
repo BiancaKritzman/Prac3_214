@@ -117,7 +117,7 @@ refreshments->reportTheft("A cooler of drinks");
 //     MusicZone* mainStageZone = new MusicZone("Main Stage Zone", true);
 
 //     //leaves
-//     Gate* mainGate = new Gate(true);
+//     Gate* mainGate = new Gate(true, "G1");
 //     Stage* mainStage = new Stage("The Midnight Echoes");
 //     SoundTeam* soundTeam = new SoundTeam();
 //     Security* securityTeam = new Security(5, "Vendor Alley", mainFestivalZone);

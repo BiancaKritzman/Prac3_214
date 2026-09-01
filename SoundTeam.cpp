@@ -8,7 +8,9 @@ void SoundTeam::update(const Notice& notice) {
         makeAnnouncement("Schedule update: " + notice.detail);
     } else if (notice.type == "ANNOUNCE_MERCH") {
         makeAnnouncement("New merch now available for " + notice.detail + " — head to the vendor zone!");
-    }
+    } else if (notice.type == "REPORT_THEFT") {
+    makeAnnouncement("Please remain calm — security has been notified of an incident in the vendor zone.");
+}
 }
 
 void SoundTeam::makeAnnouncement(std::string msg) {

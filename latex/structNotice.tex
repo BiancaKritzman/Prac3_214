@@ -1,0 +1,70 @@
+\doxysection{Notice Struct Reference}
+\hypertarget{structNotice}{}\label{structNotice}\index{Notice@{Notice}}
+
+
+Represents a notification sent to observers in the festival system.  
+
+
+
+
+{\ttfamily \#include $<$Music\+Festival\+Observer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structNotice_a43651602a469b10f138af4d2ecf70f49}{Notice}} (std\+::string type, std\+::string zone\+ID, std\+::string detail, int current\+Capacity=0, int threshold=0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{structNotice}{Notice} describing a festival event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structNotice_aec8f5b0bf9aab9c52bf05dad4af8b571}\label{structNotice_aec8f5b0bf9aab9c52bf05dad4af8b571} 
+std\+::string {\bfseries type}
+\item 
+\Hypertarget{structNotice_ab8a79fdc77500e97a282bc21f414de00}\label{structNotice_ab8a79fdc77500e97a282bc21f414de00} 
+std\+::string {\bfseries zone\+ID}
+\item 
+\Hypertarget{structNotice_abf4173c1a438f7ce460becccf5fbcf9f}\label{structNotice_abf4173c1a438f7ce460becccf5fbcf9f} 
+std\+::string {\bfseries detail}
+\item 
+\Hypertarget{structNotice_a13b2b25ce8ee8dd5f09385c2f2ec199d}\label{structNotice_a13b2b25ce8ee8dd5f09385c2f2ec199d} 
+int {\bfseries current\+Capacity}
+\item 
+\Hypertarget{structNotice_ad6da909b3a9c82370ebb75df50d6f1ea}\label{structNotice_ad6da909b3a9c82370ebb75df50d6f1ea} 
+int {\bfseries threshold}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a notification sent to observers in the festival system. 
+
+A \doxylink{structNotice}{Notice} contains information about an event occurring at the festival, such as a theft, capacity alert, or schedule update. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structNotice_a43651602a469b10f138af4d2ecf70f49}\label{structNotice_a43651602a469b10f138af4d2ecf70f49} 
+\index{Notice@{Notice}!Notice@{Notice}}
+\index{Notice@{Notice}!Notice@{Notice}}
+\doxysubsubsection{\texorpdfstring{Notice()}{Notice()}}
+{\footnotesize\ttfamily Notice\+::\+Notice (\begin{DoxyParamCaption}\item[{std\+::string}]{type,  }\item[{std\+::string}]{zone\+ID,  }\item[{std\+::string}]{detail,  }\item[{int}]{current\+Capacity = {\ttfamily 0},  }\item[{int}]{threshold = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{structNotice}{Notice} describing a festival event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of notification being generated. \\
+\hline
+{\em zone\+ID} & Identifier of the zone associated with the notification. \\
+\hline
+{\em detail} & Additional information about the notification. \\
+\hline
+{\em current\+Capacity} & Current capacity of the relevant zone. \\
+\hline
+{\em threshold} & Capacity threshold associated with the notification. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Music\+Festival\+Observer.\+h\end{DoxyCompactItemize}

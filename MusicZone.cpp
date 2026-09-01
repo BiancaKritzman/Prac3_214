@@ -10,6 +10,7 @@ void MusicZone::describe(){
     else {
         std::cout << "Stage will be live soon.\n";
     }
+    Zones::describe();
 }
 
 std::string MusicZone::getStageName() const {

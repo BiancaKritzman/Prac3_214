@@ -1,0 +1,32 @@
+\doxysection{Merch.\+h}
+\hypertarget{Merch_8h_source}{}\label{Merch_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MERCH\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MERCH\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}MusicFestivalObserver.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}VendorZone.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMerch}{Merch}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classVendorZone}{VendorZone}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::string\ artistName;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMerch}{Merch}}(std::string\ zoneName,\ \textcolor{keywordtype}{int}\ stalls,\ std::string\ artist);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMerch_a2c595b05dda56964bb0bbbd52a001de3}{requestAnnouncement}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMerch_a7fa5174f44e5e02dfa1e2959383adbbc}{update}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structNotice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMerch_a5031d50800194c014f9daad1a309f748}{add}}(\mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}*\ child)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMerch_a4d554ba13698348fdd433d4e675efdaa}{remove}}(\mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}*\ child)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMerch_a0b4058538202d46282bdf3e110d4e9f6}{describe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

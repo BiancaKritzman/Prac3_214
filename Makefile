@@ -1,4 +1,4 @@
-CXX=g++ -std=c++
+CXX=g++ -std=c++11
 CFLAGS=-I. -Wall -Werror
 TARGET=eventflow
 OBJS= Gate.o Security.o SoundTeam.o Stage.o Zones.o \
@@ -13,3 +13,6 @@ all: $(OBJS)
 
 clean:
 	rm -f $(TARGET) $(OBJS)
+
+leak:	
+	valgrind --leak-check=full ./eventflow

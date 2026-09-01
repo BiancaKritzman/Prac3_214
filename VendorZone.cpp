@@ -6,4 +6,5 @@ VendorZone::VendorZone(std::string name, int stalls)
 
 void VendorZone::describe() {
     std::cout << "VendorZone with " << totalStalls << " stalls\n";
+    Zones::describe();
 }

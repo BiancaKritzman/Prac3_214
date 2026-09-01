@@ -1,0 +1,146 @@
+\doxysection{Stage Class Reference}
+\hypertarget{classStage}{}\label{classStage}\index{Stage@{Stage}}
+
+
+Represents a festival performance stage.  
+
+
+
+
+{\ttfamily \#include $<$Stage.\+h$>$}
+
+
+
+Inheritance diagram for Stage\+:
+% FIG 0
+
+
+Collaboration diagram for Stage\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStage_a7fe4a8da356e37b5363187384480c88e}{Stage}} (std\+::string artist)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classStage}{Stage} for a specified artist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStage_accdc1b373aece7bc3eadf252ef5185c4}{add}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child) override
+\begin{DoxyCompactList}\small\item\em Attempts to add a child component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStage_ad89a887619ba127d8b00e2268305a390}{remove}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child) override
+\begin{DoxyCompactList}\small\item\em Attempts to remove a child component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStage_a601c6d05986c698d0a54621375c69947}{update}} (const \mbox{\hyperlink{structNotice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Responds to theft and merchandise notifications. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStage_ac4415425b09e1ad9171c467c87b69d46}{describe}} () override
+\begin{DoxyCompactList}\small\item\em Displays information about the current artist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classMusicFestivalObserver_adf8f715c407bac325ad3fe87ef75c501}{\texorpdfstring{$\sim$}{\string~}\+Music\+Festival\+Observer}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroys the observer/component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a festival performance stage. 
+
+\doxylink{classStage}{Stage} is a leaf participant in the Composite pattern because it cannot contain child components.
+
+It also acts as an Observer and responds to theft and merchandise alerts affecting the stage. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classStage_a7fe4a8da356e37b5363187384480c88e}\label{classStage_a7fe4a8da356e37b5363187384480c88e} 
+\index{Stage@{Stage}!Stage@{Stage}}
+\index{Stage@{Stage}!Stage@{Stage}}
+\doxysubsubsection{\texorpdfstring{Stage()}{Stage()}}
+{\footnotesize\ttfamily Stage\+::\+Stage (\begin{DoxyParamCaption}\item[{std\+::string}]{artist }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classStage}{Stage} for a specified artist. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em artist} & Name of the artist performing at the stage. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStage_accdc1b373aece7bc3eadf252ef5185c4}\label{classStage_accdc1b373aece7bc3eadf252ef5185c4} 
+\index{Stage@{Stage}!add@{add}}
+\index{add@{add}!Stage@{Stage}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Stage\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Attempts to add a child component. 
+
+\doxylink{classStage}{Stage} is a leaf and therefore cannot contain children.
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Child component that cannot be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9b762788017473c1a1cdb351e9485a8f}{Music\+Festival\+Observer}}.
+
+\Hypertarget{classStage_ac4415425b09e1ad9171c467c87b69d46}\label{classStage_ac4415425b09e1ad9171c467c87b69d46} 
+\index{Stage@{Stage}!describe@{describe}}
+\index{describe@{describe}!Stage@{Stage}}
+\doxysubsubsection{\texorpdfstring{describe()}{describe()}}
+{\footnotesize\ttfamily void Stage\+::describe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays information about the current artist. 
+
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9c0146e5e85f1de6552638175e1b35dd}{Music\+Festival\+Observer}}.
+
+\Hypertarget{classStage_ad89a887619ba127d8b00e2268305a390}\label{classStage_ad89a887619ba127d8b00e2268305a390} 
+\index{Stage@{Stage}!remove@{remove}}
+\index{remove@{remove}!Stage@{Stage}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Stage\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Attempts to remove a child component. 
+
+\doxylink{classStage}{Stage} is a leaf and therefore cannot contain children.
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Child component that cannot be removed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a0279b1d7fa47dff9168ae2a875c9bef1}{Music\+Festival\+Observer}}.
+
+\Hypertarget{classStage_a601c6d05986c698d0a54621375c69947}\label{classStage_a601c6d05986c698d0a54621375c69947} 
+\index{Stage@{Stage}!update@{update}}
+\index{update@{update}!Stage@{Stage}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Stage\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Responds to theft and merchandise notifications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notification received from the festival subject. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9d131241ead8e93ac720fb5926b83e8f}{Music\+Festival\+Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Stage.\+h\item 
+Stage.\+cpp\end{DoxyCompactItemize}

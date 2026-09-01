@@ -1,11 +1,11 @@
 #include "Gate.h"
 #include <iostream>
 
-Gate::Gate(bool open) : isOpen(open) {}
+Gate::Gate(bool open, std::string id) : gateID(id), isOpen(open) {}
 
 void Gate::describe() {
     if (isOpen) {
-        std::cout << "Stand back!! The stage gate " << gateID << "is opening.\n";
+        std::cout << "Stand back!! The stage gate " << gateID << " is opening.\n";
     }
     else {
         std::cout << "Capacity limits have been reached. Stage gate" << gateID <<" is closing.\n";

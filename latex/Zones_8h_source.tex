@@ -1,0 +1,42 @@
+\doxysection{Zones.\+h}
+\hypertarget{Zones_8h_source}{}\label{Zones_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ZONES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ZONES\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}MusicFestivalObserver.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classZones}{Zones}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::string\ zoneName;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::vector<MusicFestivalObserver*>\ children;\ \ \ \ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::vector<MusicFestivalObserver*>\ observerList;\ \ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classZones}{Zones}}(std::string\ name);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classZones_a2c1bd7a7a197d2c31e1488a2ebad39c9}{\string~Zones}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classZones_a1789fb0d77a93744031e5b3b2abdd257}{add}}(\mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}*\ child)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classZones_a3aa8ac7e59267683f737925c1d7bafbd}{remove}}(\mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}*\ child)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classZones_ac980901a9359a3b9db689e27c82f940f}{attach}}(\mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}*\ observer);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classZones_ad83f1b730f62aa6831668cae2cd2edca}{detach}}(\mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}*\ observer);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classZones_a7784f21036dae2d91450e0105bb8a194}{notify}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structNotice}{Notice}}\&\ notice);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classZones_a2fbec6d438a2ceb3595b71cfd9d90f4e}{update}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structNotice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classZones_aebda60b1e52c5f7cece4a27fad306148}{describe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00131\ \};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

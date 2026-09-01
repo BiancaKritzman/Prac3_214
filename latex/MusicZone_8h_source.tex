@@ -1,0 +1,36 @@
+\doxysection{Music\+Zone.\+h}
+\hypertarget{MusicZone_8h_source}{}\label{MusicZone_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MUSICZONE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MUSICZONE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Zones.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPerformance}{Performance}}\{}
+\DoxyCodeLine{00010\ \ \ \ \ std::string\ startTime;}
+\DoxyCodeLine{00011\ \ \ \ \ std::string\ endTime;}
+\DoxyCodeLine{00012\ \};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMusicZone}{MusicZone}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classZones}{Zones}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structPerformance}{Performance}}\ schedule;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isLive;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::string\ stageName;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMusicZone}{MusicZone}}(std::string\ stageName,\ \textcolor{keywordtype}{bool}\ isLive);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMusicZone_ad58ae81334b274e65700b36a22d78072}{describe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classMusicZone_aab5c738f54afb39cc929c7fd5b54dcdf}{getSchedule}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classMusicZone_a5d0e429e65e00194660d076531eb6059}{getStageName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMusicZone_af88e611d2312378df8c9db4613c89e66}{setSchedule}}(std::string\ startTime,\ std::string\ endTime);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

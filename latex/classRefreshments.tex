@@ -1,0 +1,114 @@
+\doxysection{Refreshments Class Reference}
+\hypertarget{classRefreshments}{}\label{classRefreshments}\index{Refreshments@{Refreshments}}
+
+
+Represents a refreshments vendor in the festival.  
+
+
+
+
+{\ttfamily \#include $<$Refreshments.\+h$>$}
+
+
+
+Inheritance diagram for Refreshments\+:
+% FIG 0
+
+
+Collaboration diagram for Refreshments\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRefreshments_ab53c5bd22c77dba8581e0384e6a0d56f}{Refreshments}} (std\+::string zone\+Name, int stalls, std\+::string vendor\+Name, int initial\+Count)
+\begin{DoxyCompactList}\small\item\em Constructs a refreshments vendor. \end{DoxyCompactList}\item 
+\Hypertarget{classRefreshments_a6bd5d4685896a5f6e6d98e76e819de16}\label{classRefreshments_a6bd5d4685896a5f6e6d98e76e819de16} 
+void {\bfseries report\+Theft} ()
+\begin{DoxyCompactList}\small\item\em Reports a theft from the refreshments vendor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRefreshments_aef4ef51468c1b7567ba54265df8d2a53}{describe}} () override
+\begin{DoxyCompactList}\small\item\em Displays information about the refreshments vendor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVendorZone}{Vendor\+Zone}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVendorZone_a39f35aa53403b6e2491a8aa45c52b608}{Vendor\+Zone}} (std\+::string name, int stalls)
+\begin{DoxyCompactList}\small\item\em Constructs a vendor zone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVendorZone_a4590a87d8f6912b69effe8285ce32ad1}{describe}} () override
+\begin{DoxyCompactList}\small\item\em Displays information about the vendor zone. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classZones}{Zones}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classZones_a9ef88a4d10e36a62567b297d267d1851}{Zones}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a festival zone. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classZones_a2c1bd7a7a197d2c31e1488a2ebad39c9}{\texorpdfstring{$\sim$}{\string~}\+Zones}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the zone and its owned children. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_a1789fb0d77a93744031e5b3b2abdd257}{add}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child) override
+\begin{DoxyCompactList}\small\item\em Adds a child to the zone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_a3aa8ac7e59267683f737925c1d7bafbd}{remove}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child) override
+\begin{DoxyCompactList}\small\item\em Removes a child from the zone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_ac980901a9359a3b9db689e27c82f940f}{attach}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Registers an observer to receive future notifications. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_ad83f1b730f62aa6831668cae2cd2edca}{detach}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Removes an observer from the notification list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_a7784f21036dae2d91450e0105bb8a194}{notify}} (const \mbox{\hyperlink{structNotice}{Notice}} \&notice)
+\begin{DoxyCompactList}\small\item\em Sends a notification to all registered observers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_a2fbec6d438a2ceb3595b71cfd9d90f4e}{update}} (const \mbox{\hyperlink{structNotice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Receives a notification and forwards it to observers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_aebda60b1e52c5f7cece4a27fad306148}{describe}} () override
+\begin{DoxyCompactList}\small\item\em Displays this zone and recursively describes its children. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classMusicFestivalObserver_adf8f715c407bac325ad3fe87ef75c501}{\texorpdfstring{$\sim$}{\string~}\+Music\+Festival\+Observer}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroys the observer/component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a refreshments vendor in the festival. 
+
+\doxylink{classRefreshments}{Refreshments} is a leaf component within the \doxylink{classVendorZone}{Vendor\+Zone} hierarchy and stores information about the vendor and available refreshments. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRefreshments_ab53c5bd22c77dba8581e0384e6a0d56f}\label{classRefreshments_ab53c5bd22c77dba8581e0384e6a0d56f} 
+\index{Refreshments@{Refreshments}!Refreshments@{Refreshments}}
+\index{Refreshments@{Refreshments}!Refreshments@{Refreshments}}
+\doxysubsubsection{\texorpdfstring{Refreshments()}{Refreshments()}}
+{\footnotesize\ttfamily Refreshments\+::\+Refreshments (\begin{DoxyParamCaption}\item[{std\+::string}]{zone\+Name,  }\item[{int}]{stalls,  }\item[{std\+::string}]{vendor\+Name,  }\item[{int}]{initial\+Count }\end{DoxyParamCaption})}
+
+
+
+Constructs a refreshments vendor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Name} & Name of the vendor zone. \\
+\hline
+{\em stalls} & Number of stalls allocated to the vendor. \\
+\hline
+{\em vendor\+Name} & Name of the refreshments vendor. \\
+\hline
+{\em initial\+Count} & Initial number of refreshments available. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRefreshments_aef4ef51468c1b7567ba54265df8d2a53}\label{classRefreshments_aef4ef51468c1b7567ba54265df8d2a53} 
+\index{Refreshments@{Refreshments}!describe@{describe}}
+\index{describe@{describe}!Refreshments@{Refreshments}}
+\doxysubsubsection{\texorpdfstring{describe()}{describe()}}
+{\footnotesize\ttfamily void Refreshments\+::describe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays information about the refreshments vendor. 
+
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9c0146e5e85f1de6552638175e1b35dd}{Music\+Festival\+Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Refreshments.\+h\item 
+Refreshments.\+cpp\end{DoxyCompactItemize}

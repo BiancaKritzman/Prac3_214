@@ -1,0 +1,169 @@
+\doxysection{Security Class Reference}
+\hypertarget{classSecurity}{}\label{classSecurity}\index{Security@{Security}}
+
+
+Represents the festival security team.  
+
+
+
+
+{\ttfamily \#include $<$Security.\+h$>$}
+
+
+
+Inheritance diagram for Security\+:
+% FIG 0
+
+
+Collaboration diagram for Security\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSecurity_a872f14693b27725fb5eda5f80d464030}{Security}} (int guards, std\+::string zone, \mbox{\hyperlink{classZones}{Zones}} \texorpdfstring{$\ast$}{*}root)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classSecurity}{Security} team. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSecurity_a481717d8a9d76b8e77bb03c573f5b914}{update}} (const \mbox{\hyperlink{structNotice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Responds to a festival notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSecurity_a9c2c77b10341d7cfbd3dfd34818b0a61}{dispatch\+To\+Zone}} (std\+::string zone\+Name)
+\begin{DoxyCompactList}\small\item\em Dispatches security to a specified zone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSecurity_adbd49033bcef70c67fe6b4ea7e73a2b3}{add}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child) override
+\begin{DoxyCompactList}\small\item\em Attempts to add a child component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSecurity_aa03c2d0917e1a0e4f54f62a6e5aeb400}{remove}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child) override
+\begin{DoxyCompactList}\small\item\em Attempts to remove a child component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSecurity_a5204db99fa9c633cff78db84d915e22b}{describe}} () override
+\begin{DoxyCompactList}\small\item\em Displays the current security team status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classMusicFestivalObserver_adf8f715c407bac325ad3fe87ef75c501}{\texorpdfstring{$\sim$}{\string~}\+Music\+Festival\+Observer}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroys the observer/component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the festival security team. 
+
+\doxylink{classSecurity}{Security} is a leaf participant in the Composite pattern because it does not contain child festival components.
+
+\doxylink{classSecurity}{Security} also acts as an Observer by responding to theft reports and dispatching security to the affected zone. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSecurity_a872f14693b27725fb5eda5f80d464030}\label{classSecurity_a872f14693b27725fb5eda5f80d464030} 
+\index{Security@{Security}!Security@{Security}}
+\index{Security@{Security}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{Security()}{Security()}}
+{\footnotesize\ttfamily Security\+::\+Security (\begin{DoxyParamCaption}\item[{int}]{guards,  }\item[{std\+::string}]{zone,  }\item[{\mbox{\hyperlink{classZones}{Zones}} \texorpdfstring{$\ast$}{*}}]{root }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classSecurity}{Security} team. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guards} & Number of guards available to the security team. \\
+\hline
+{\em zone} & Zone where the security team is initially located. \\
+\hline
+{\em root} & Root zone used to send notifications after security responds to an incident.\\
+\hline
+\end{DoxyParams}
+The root pointer is non-\/owning. \doxylink{classSecurity}{Security} uses the root to send notifications but does not manage its lifetime. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSecurity_adbd49033bcef70c67fe6b4ea7e73a2b3}\label{classSecurity_adbd49033bcef70c67fe6b4ea7e73a2b3} 
+\index{Security@{Security}!add@{add}}
+\index{add@{add}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Security\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Attempts to add a child component. 
+
+\doxylink{classSecurity}{Security} is a leaf and therefore cannot contain children. This operation has no effect.
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Child component that cannot be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9b762788017473c1a1cdb351e9485a8f}{Music\+Festival\+Observer}}.
+
+\Hypertarget{classSecurity_a5204db99fa9c633cff78db84d915e22b}\label{classSecurity_a5204db99fa9c633cff78db84d915e22b} 
+\index{Security@{Security}!describe@{describe}}
+\index{describe@{describe}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{describe()}{describe()}}
+{\footnotesize\ttfamily void Security\+::describe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays the current security team status. 
+
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9c0146e5e85f1de6552638175e1b35dd}{Music\+Festival\+Observer}}.
+
+\Hypertarget{classSecurity_a9c2c77b10341d7cfbd3dfd34818b0a61}\label{classSecurity_a9c2c77b10341d7cfbd3dfd34818b0a61} 
+\index{Security@{Security}!dispatchToZone@{dispatchToZone}}
+\index{dispatchToZone@{dispatchToZone}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{dispatchToZone()}{dispatchToZone()}}
+{\footnotesize\ttfamily void Security\+::dispatch\+To\+Zone (\begin{DoxyParamCaption}\item[{std\+::string}]{zone\+Name }\end{DoxyParamCaption})}
+
+
+
+Dispatches security to a specified zone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Name} & Name or identifier of the zone receiving security. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSecurity_aa03c2d0917e1a0e4f54f62a6e5aeb400}\label{classSecurity_aa03c2d0917e1a0e4f54f62a6e5aeb400} 
+\index{Security@{Security}!remove@{remove}}
+\index{remove@{remove}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Security\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Attempts to remove a child component. 
+
+\doxylink{classSecurity}{Security} is a leaf and therefore cannot contain children. This operation has no effect.
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Child component that cannot be removed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a0279b1d7fa47dff9168ae2a875c9bef1}{Music\+Festival\+Observer}}.
+
+\Hypertarget{classSecurity_a481717d8a9d76b8e77bb03c573f5b914}\label{classSecurity_a481717d8a9d76b8e77bb03c573f5b914} 
+\index{Security@{Security}!update@{update}}
+\index{update@{update}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Security\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Responds to a festival notification. 
+
+\doxylink{classSecurity}{Security} responds to theft reports by dispatching security to the zone identified by the notification.
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notification received from the festival subject. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9d131241ead8e93ac720fb5926b83e8f}{Music\+Festival\+Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Security.\+h\item 
+Security.\+cpp\end{DoxyCompactItemize}

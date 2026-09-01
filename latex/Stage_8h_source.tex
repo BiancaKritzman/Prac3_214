@@ -1,0 +1,28 @@
+\doxysection{Stage.\+h}
+\hypertarget{Stage_8h_source}{}\label{Stage_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STAGE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STAGE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}MusicFestivalObserver.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStage}{Stage}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::string\ currentArtist;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStage}{Stage}}(std::string\ artist);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStage_accdc1b373aece7bc3eadf252ef5185c4}{add}}(\mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}*\ child)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStage_ad89a887619ba127d8b00e2268305a390}{remove}}(\mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}*\ child)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStage_a601c6d05986c698d0a54621375c69947}{update}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structNotice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStage_ac4415425b09e1ad9171c467c87b69d46}{describe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

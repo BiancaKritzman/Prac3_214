@@ -1,0 +1,215 @@
+\doxysection{Zones Class Reference}
+\hypertarget{classZones}{}\label{classZones}\index{Zones@{Zones}}
+
+
+Represents a festival zone that can contain other components.  
+
+
+
+
+{\ttfamily \#include $<$Zones.\+h$>$}
+
+
+
+Inheritance diagram for Zones\+:
+% FIG 0
+
+
+Collaboration diagram for Zones\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classZones_a9ef88a4d10e36a62567b297d267d1851}{Zones}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a festival zone. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classZones_a2c1bd7a7a197d2c31e1488a2ebad39c9}{\texorpdfstring{$\sim$}{\string~}\+Zones}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the zone and its owned children. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_a1789fb0d77a93744031e5b3b2abdd257}{add}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child) override
+\begin{DoxyCompactList}\small\item\em Adds a child to the zone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_a3aa8ac7e59267683f737925c1d7bafbd}{remove}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child) override
+\begin{DoxyCompactList}\small\item\em Removes a child from the zone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_ac980901a9359a3b9db689e27c82f940f}{attach}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Registers an observer to receive future notifications. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_ad83f1b730f62aa6831668cae2cd2edca}{detach}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Removes an observer from the notification list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_a7784f21036dae2d91450e0105bb8a194}{notify}} (const \mbox{\hyperlink{structNotice}{Notice}} \&notice)
+\begin{DoxyCompactList}\small\item\em Sends a notification to all registered observers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_a2fbec6d438a2ceb3595b71cfd9d90f4e}{update}} (const \mbox{\hyperlink{structNotice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Receives a notification and forwards it to observers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_aebda60b1e52c5f7cece4a27fad306148}{describe}} () override
+\begin{DoxyCompactList}\small\item\em Displays this zone and recursively describes its children. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classMusicFestivalObserver_adf8f715c407bac325ad3fe87ef75c501}{\texorpdfstring{$\sim$}{\string~}\+Music\+Festival\+Observer}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroys the observer/component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a festival zone that can contain other components. 
+
+\doxylink{classZones}{Zones} is the Composite participant in the Composite design pattern. It allows individual festival components and groups of components to be treated through the same \doxylink{classMusicFestivalObserver}{Music\+Festival\+Observer} interface.
+
+\doxylink{classZones}{Zones} also acts as a Subject in the Observer pattern by maintaining a list of observers and notifying them when a festival event occurs. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classZones_a9ef88a4d10e36a62567b297d267d1851}\label{classZones_a9ef88a4d10e36a62567b297d267d1851} 
+\index{Zones@{Zones}!Zones@{Zones}}
+\index{Zones@{Zones}!Zones@{Zones}}
+\doxysubsubsection{\texorpdfstring{Zones()}{Zones()}}
+{\footnotesize\ttfamily Zones\+::\+Zones (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Constructs a festival zone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the zone. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classZones_a2c1bd7a7a197d2c31e1488a2ebad39c9}\label{classZones_a2c1bd7a7a197d2c31e1488a2ebad39c9} 
+\index{Zones@{Zones}!````~Zones@{\texorpdfstring{$\sim$}{\string~}Zones}}
+\index{````~Zones@{\texorpdfstring{$\sim$}{\string~}Zones}!Zones@{Zones}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Zones()}{\string~Zones()}}
+{\footnotesize\ttfamily Zones\+::\texorpdfstring{$\sim$}{\string~}\+Zones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Destroys the zone and its owned children. 
+
+All children currently owned by the zone are deleted. Observers are not deleted because observer\+List contains non-\/owning pointers. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classZones_a1789fb0d77a93744031e5b3b2abdd257}\label{classZones_a1789fb0d77a93744031e5b3b2abdd257} 
+\index{Zones@{Zones}!add@{add}}
+\index{add@{add}!Zones@{Zones}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Zones\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a child to the zone. 
+
+Ownership of the child is transferred to this zone. The zone becomes responsible for deleting the child when it is destroyed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Component to add. A nullptr is ignored. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9b762788017473c1a1cdb351e9485a8f}{Music\+Festival\+Observer}}.
+
+\Hypertarget{classZones_ac980901a9359a3b9db689e27c82f940f}\label{classZones_ac980901a9359a3b9db689e27c82f940f} 
+\index{Zones@{Zones}!attach@{attach}}
+\index{attach@{attach}!Zones@{Zones}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Zones\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})}
+
+
+
+Registers an observer to receive future notifications. 
+
+The observer pointer is non-\/owning. \doxylink{classZones}{Zones} stores the pointer only for notification purposes and does not delete the observer. The observer must remain alive while registered and should be detached before it is destroyed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & Observer to register. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classZones_aebda60b1e52c5f7cece4a27fad306148}\label{classZones_aebda60b1e52c5f7cece4a27fad306148} 
+\index{Zones@{Zones}!describe@{describe}}
+\index{describe@{describe}!Zones@{Zones}}
+\doxysubsubsection{\texorpdfstring{describe()}{describe()}}
+{\footnotesize\ttfamily void Zones\+::describe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays this zone and recursively describes its children. 
+
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9c0146e5e85f1de6552638175e1b35dd}{Music\+Festival\+Observer}}.
+
+\Hypertarget{classZones_ad83f1b730f62aa6831668cae2cd2edca}\label{classZones_ad83f1b730f62aa6831668cae2cd2edca} 
+\index{Zones@{Zones}!detach@{detach}}
+\index{detach@{detach}!Zones@{Zones}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Zones\+::detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})}
+
+
+
+Removes an observer from the notification list. 
+
+Removing the observer does not destroy it because \doxylink{classZones}{Zones} does not own objects stored in observer\+List.
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & Observer to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classZones_a7784f21036dae2d91450e0105bb8a194}\label{classZones_a7784f21036dae2d91450e0105bb8a194} 
+\index{Zones@{Zones}!notify@{notify}}
+\index{notify@{notify}!Zones@{Zones}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void Zones\+::notify (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})}
+
+
+
+Sends a notification to all registered observers. 
+
+Each registered observer receives the supplied \doxylink{structNotice}{Notice} through its update operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notification to broadcast. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classZones_a3aa8ac7e59267683f737925c1d7bafbd}\label{classZones_a3aa8ac7e59267683f737925c1d7bafbd} 
+\index{Zones@{Zones}!remove@{remove}}
+\index{remove@{remove}!Zones@{Zones}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Zones\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes a child from the zone. 
+
+Removing a child releases the zone\textquotesingle{}s ownership without deleting the child. The caller becomes responsible for the child\textquotesingle{}s lifetime.
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Component to remove. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a0279b1d7fa47dff9168ae2a875c9bef1}{Music\+Festival\+Observer}}.
+
+\Hypertarget{classZones_a2fbec6d438a2ceb3595b71cfd9d90f4e}\label{classZones_a2fbec6d438a2ceb3595b71cfd9d90f4e} 
+\index{Zones@{Zones}!update@{update}}
+\index{update@{update}!Zones@{Zones}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Zones\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Receives a notification and forwards it to observers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notification to forward. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9d131241ead8e93ac720fb5926b83e8f}{Music\+Festival\+Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Zones.\+h\item 
+Zones.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,117 @@
+\doxysection{Artist Class Reference}
+\hypertarget{classArtist}{}\label{classArtist}\index{Artist@{Artist}}
+
+
+Represents an artist performing within a music zone.  
+
+
+
+
+{\ttfamily \#include $<$Artist.\+h$>$}
+
+
+
+Inheritance diagram for Artist\+:
+% FIG 0
+
+
+Collaboration diagram for Artist\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArtist_a446ab6f98ade8073db5a36f15a8bd379}{Artist}} (std\+::string zone\+Name, bool is\+Live, std\+::string artist\+Name, std\+::string genre)
+\begin{DoxyCompactList}\small\item\em Constructs an artist performance zone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArtist_a2acc635960dfd1075720507d920d25eb}{describe}} () override
+\begin{DoxyCompactList}\small\item\em Displays information about the performing artist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMusicZone}{Music\+Zone}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMusicZone_a74ee73324d99de4f54f4cec37dddeb9a}{Music\+Zone}} (std\+::string stage\+Name, bool is\+Live)
+\begin{DoxyCompactList}\small\item\em Constructs a music zone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMusicZone_ad58ae81334b274e65700b36a22d78072}{describe}} () override
+\begin{DoxyCompactList}\small\item\em Displays the current stage status and its child components. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMusicZone_aab5c738f54afb39cc929c7fd5b54dcdf}{get\+Schedule}} () const
+\begin{DoxyCompactList}\small\item\em Returns a formatted description of the performance schedule. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMusicZone_a5d0e429e65e00194660d076531eb6059}{get\+Stage\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of the stage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMusicZone_af88e611d2312378df8c9db4613c89e66}{set\+Schedule}} (std\+::string start\+Time, std\+::string end\+Time)
+\begin{DoxyCompactList}\small\item\em Sets the performance schedule for the music zone. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classZones}{Zones}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classZones_a9ef88a4d10e36a62567b297d267d1851}{Zones}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a festival zone. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classZones_a2c1bd7a7a197d2c31e1488a2ebad39c9}{\texorpdfstring{$\sim$}{\string~}\+Zones}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the zone and its owned children. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_a1789fb0d77a93744031e5b3b2abdd257}{add}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child) override
+\begin{DoxyCompactList}\small\item\em Adds a child to the zone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_a3aa8ac7e59267683f737925c1d7bafbd}{remove}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}child) override
+\begin{DoxyCompactList}\small\item\em Removes a child from the zone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_ac980901a9359a3b9db689e27c82f940f}{attach}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Registers an observer to receive future notifications. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_ad83f1b730f62aa6831668cae2cd2edca}{detach}} (\mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Removes an observer from the notification list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_a7784f21036dae2d91450e0105bb8a194}{notify}} (const \mbox{\hyperlink{structNotice}{Notice}} \&notice)
+\begin{DoxyCompactList}\small\item\em Sends a notification to all registered observers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_a2fbec6d438a2ceb3595b71cfd9d90f4e}{update}} (const \mbox{\hyperlink{structNotice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Receives a notification and forwards it to observers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZones_aebda60b1e52c5f7cece4a27fad306148}{describe}} () override
+\begin{DoxyCompactList}\small\item\em Displays this zone and recursively describes its children. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMusicFestivalObserver}{Music\+Festival\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classMusicFestivalObserver_adf8f715c407bac325ad3fe87ef75c501}{\texorpdfstring{$\sim$}{\string~}\+Music\+Festival\+Observer}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroys the observer/component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an artist performing within a music zone. 
+
+\doxylink{classArtist}{Artist} is a specialised \doxylink{classMusicZone}{Music\+Zone} containing information about the performing artist and their musical genre. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classArtist_a446ab6f98ade8073db5a36f15a8bd379}\label{classArtist_a446ab6f98ade8073db5a36f15a8bd379} 
+\index{Artist@{Artist}!Artist@{Artist}}
+\index{Artist@{Artist}!Artist@{Artist}}
+\doxysubsubsection{\texorpdfstring{Artist()}{Artist()}}
+{\footnotesize\ttfamily Artist\+::\+Artist (\begin{DoxyParamCaption}\item[{std\+::string}]{zone\+Name,  }\item[{bool}]{is\+Live,  }\item[{std\+::string}]{artist\+Name,  }\item[{std\+::string}]{genre }\end{DoxyParamCaption})}
+
+
+
+Constructs an artist performance zone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Name} & Name of the music zone. \\
+\hline
+{\em is\+Live} & Whether the performance is currently live. \\
+\hline
+{\em artist\+Name} & Name of the performing artist. \\
+\hline
+{\em genre} & Musical genre of the artist. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classArtist_a2acc635960dfd1075720507d920d25eb}\label{classArtist_a2acc635960dfd1075720507d920d25eb} 
+\index{Artist@{Artist}!describe@{describe}}
+\index{describe@{describe}!Artist@{Artist}}
+\doxysubsubsection{\texorpdfstring{describe()}{describe()}}
+{\footnotesize\ttfamily void Artist\+::describe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays information about the performing artist. 
+
+
+
+Implements \mbox{\hyperlink{classMusicFestivalObserver_a9c0146e5e85f1de6552638175e1b35dd}{Music\+Festival\+Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Artist.\+h\item 
+Artist.\+cpp\end{DoxyCompactItemize}

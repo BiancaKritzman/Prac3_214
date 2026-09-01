@@ -1,0 +1,30 @@
+\doxysection{Gate.\+h}
+\hypertarget{Gate_8h_source}{}\label{Gate_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GATE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GATE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}MusicFestivalObserver.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGate}{Gate}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isOpen;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ std::string\ gateID;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGate}{Gate}}(\textcolor{keywordtype}{bool}\ open,\ std::string\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGate_ad32bf6834fc55c02ca81b06a4fbd0b28}{describe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGate_abc0f6b290282fe6d6368f86161574b53}{update}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structNotice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGate_a32d597c111b1c3b23ab4f151c9911a3f}{add}}(\mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}*\ child)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGate_ab7cae14290f7be8c7e7f9de3d4c3c8a8}{remove}}(\mbox{\hyperlink{classMusicFestivalObserver}{MusicFestivalObserver}}*\ child)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGate_af90df9c9f033d248c2b2de4fa8549fe7}{setAndCall}}(\textcolor{keywordtype}{bool}\ open);}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

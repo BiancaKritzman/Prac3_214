@@ -10,7 +10,9 @@ void SoundTeam::update(const Notice& notice) {
         makeAnnouncement("New merch now available for " + notice.detail + " — head to the vendor zone!");
     } else if (notice.type == "REPORT_THEFT") {
     makeAnnouncement("Please remain calm — security has been notified of an incident in the vendor zone.");
-}
+    } else if (notice.type == "REPORT_THEFT") {                    // ADD THIS BLOCK
+    makeAnnouncement("Please remain calm — security has been notified of an incident in the vendor zone.");
+    }
 }
 
 void SoundTeam::makeAnnouncement(std::string msg) {

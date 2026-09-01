@@ -48,6 +48,8 @@ int main() {
 
     vendorZone->attach(merchStand);
     vendorZone->attach(refreshments);
+    vendorZone->attach(security);
+    vendorZone->attach(soundTeam);
 
     // capacity alert notice
     security->dispatchToZone("Music Zone");
@@ -81,7 +83,7 @@ vendorZone->attach(soundTeam);
 refreshments->reportTheft("A cooler of drinks");
 
 
-    // composite traversal and description
+    // composite traversal and descriptionrefreshments->reportTheft("A cooler of drinks");
     std::cout << "\n--- Full event structure ---\n";
     mainZone->describe();
 

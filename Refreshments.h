@@ -14,6 +14,7 @@ class Refreshments: public VendorZone {
         std::string vendorName;
         int refreshmentCount;
         std::string stolenItem;
+        VendorZone* parentZone;  
     public:
 
         /**
@@ -24,12 +25,11 @@ class Refreshments: public VendorZone {
          * @param vendorName Name of the refreshments vendor.
          * @param initialCount Initial number of refreshments available.
          */
-        Refreshments(std::string zoneName, int stalls, std::string vendorName, int initialCount);
-        
+        Refreshments(std::string zoneName, int stalls, std::string vendorName, int initialCount, VendorZone* parent);
         /**
          * @brief Reports a theft from the refreshments vendor.
          */
-        void reportTheft();
+        void reportTheft(std::string item);
 
         /**
          * @brief Displays information about the refreshments vendor.

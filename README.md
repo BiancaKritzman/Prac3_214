@@ -7,7 +7,8 @@ Lillian Muller
 Hayley Nel
 
 # Makefile
-Runs with 'make'
+Runs with make all
+./EventFlow
 
 # Event concept
 A music festival where everything functions smoothly, the SoundTeams gets messages when artists are done performing so they can call the new artists up on stage. There are max capacities for each stage and when that capacity is reached then the gates 

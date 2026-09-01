@@ -22,10 +22,6 @@ Collaboration diagram for Artist\+:
 \item 
 \mbox{\hyperlink{classArtist_a446ab6f98ade8073db5a36f15a8bd379}{Artist}} (std\+::string zone\+Name, bool is\+Live, std\+::string artist\+Name, std\+::string genre)
 \begin{DoxyCompactList}\small\item\em Constructs an artist performance zone. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{classArtist_a8b7987b0499f32420bec462e3a76f67a}{get\+Finish\+Time}} ()
-\begin{DoxyCompactList}\small\item\em Returns the finishing time of the performance. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{classArtist_a3feade25fb097346b69e1cae64310cb2}{get\+Start\+Time}} ()
-\begin{DoxyCompactList}\small\item\em Returns the starting time of the performance. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classArtist_a2acc635960dfd1075720507d920d25eb}{describe}} () override
 \begin{DoxyCompactList}\small\item\em Displays information about the performing artist. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMusicZone}{Music\+Zone}}}
@@ -113,32 +109,6 @@ Displays information about the performing artist.
 
 Implements \mbox{\hyperlink{classMusicFestivalObserver_a9c0146e5e85f1de6552638175e1b35dd}{Music\+Festival\+Observer}}.
 
-\Hypertarget{classArtist_a8b7987b0499f32420bec462e3a76f67a}\label{classArtist_a8b7987b0499f32420bec462e3a76f67a} 
-\index{Artist@{Artist}!getFinishTime@{getFinishTime}}
-\index{getFinishTime@{getFinishTime}!Artist@{Artist}}
-\doxysubsubsection{\texorpdfstring{getFinishTime()}{getFinishTime()}}
-{\footnotesize\ttfamily std\+::string Artist\+::get\+Finish\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Returns the finishing time of the performance. 
-
-\begin{DoxyReturn}{Returns}
-The scheduled finishing time. 
-\end{DoxyReturn}
-\Hypertarget{classArtist_a3feade25fb097346b69e1cae64310cb2}\label{classArtist_a3feade25fb097346b69e1cae64310cb2} 
-\index{Artist@{Artist}!getStartTime@{getStartTime}}
-\index{getStartTime@{getStartTime}!Artist@{Artist}}
-\doxysubsubsection{\texorpdfstring{getStartTime()}{getStartTime()}}
-{\footnotesize\ttfamily std\+::string Artist\+::get\+Start\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Returns the starting time of the performance. 
-
-\begin{DoxyReturn}{Returns}
-The scheduled starting time. 
-\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

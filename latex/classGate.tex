@@ -20,7 +20,7 @@ Collaboration diagram for Gate\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classGate_ad2a1d6cc13043ab8bb2138dbe2eee3c1}{Gate}} (bool open)
+\mbox{\hyperlink{classGate_a9abc622ac27a586585085c663932f799}{Gate}} (bool open, std\+::string id)
 \begin{DoxyCompactList}\small\item\em Constructs a gate with an initial open/closed state. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGate_ad32bf6834fc55c02ca81b06a4fbd0b28}{describe}} () override
 \begin{DoxyCompactList}\small\item\em Displays the current state of the gate. \end{DoxyCompactList}\item 
@@ -45,11 +45,11 @@ Represents a festival entrance or stage gate.
 \doxylink{classGate}{Gate} is a leaf participant in the Composite pattern and an Observer that changes its open/closed state in response to capacity and gate control notifications. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classGate_ad2a1d6cc13043ab8bb2138dbe2eee3c1}\label{classGate_ad2a1d6cc13043ab8bb2138dbe2eee3c1} 
+\Hypertarget{classGate_a9abc622ac27a586585085c663932f799}\label{classGate_a9abc622ac27a586585085c663932f799} 
 \index{Gate@{Gate}!Gate@{Gate}}
 \index{Gate@{Gate}!Gate@{Gate}}
 \doxysubsubsection{\texorpdfstring{Gate()}{Gate()}}
-{\footnotesize\ttfamily Gate\+::\+Gate (\begin{DoxyParamCaption}\item[{bool}]{open }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Gate\+::\+Gate (\begin{DoxyParamCaption}\item[{bool}]{open,  }\item[{std\+::string}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -58,6 +58,8 @@ Constructs a gate with an initial open/closed state.
 
 \begin{DoxyParams}{Parameters}
 {\em open} & True if the gate should initially be open; false otherwise. \\
+\hline
+{\em id} & The ID to uniquely identify the gate. \\
 \hline
 \end{DoxyParams}
 

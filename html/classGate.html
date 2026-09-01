@@ -93,9 +93,9 @@ Collaboration diagram for Gate:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad2a1d6cc13043ab8bb2138dbe2eee3c1" id="r_ad2a1d6cc13043ab8bb2138dbe2eee3c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGate.html#ad2a1d6cc13043ab8bb2138dbe2eee3c1">Gate</a> (bool open)</td></tr>
-<tr class="memdesc:ad2a1d6cc13043ab8bb2138dbe2eee3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a gate with an initial open/closed state.  <br /></td></tr>
-<tr class="separator:ad2a1d6cc13043ab8bb2138dbe2eee3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9abc622ac27a586585085c663932f799" id="r_a9abc622ac27a586585085c663932f799"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGate.html#a9abc622ac27a586585085c663932f799">Gate</a> (bool open, std::string id)</td></tr>
+<tr class="memdesc:a9abc622ac27a586585085c663932f799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a gate with an initial open/closed state.  <br /></td></tr>
+<tr class="separator:a9abc622ac27a586585085c663932f799"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad32bf6834fc55c02ca81b06a4fbd0b28" id="r_ad32bf6834fc55c02ca81b06a4fbd0b28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGate.html#ad32bf6834fc55c02ca81b06a4fbd0b28">describe</a> () override</td></tr>
 <tr class="memdesc:ad32bf6834fc55c02ca81b06a4fbd0b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the current state of the gate.  <br /></td></tr>
 <tr class="separator:ad32bf6834fc55c02ca81b06a4fbd0b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,8 +120,8 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Represents a festival entrance or stage gate. </p>
 <p><a class="el" href="classGate.html" title="Represents a festival entrance or stage gate.">Gate</a> is a leaf participant in the Composite pattern and an Observer that changes its open/closed state in response to capacity and gate control notifications. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad2a1d6cc13043ab8bb2138dbe2eee3c1" name="ad2a1d6cc13043ab8bb2138dbe2eee3c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2a1d6cc13043ab8bb2138dbe2eee3c1">&#9670;&#160;</a></span>Gate()</h2>
+<a id="a9abc622ac27a586585085c663932f799" name="a9abc622ac27a586585085c663932f799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9abc622ac27a586585085c663932f799">&#9670;&#160;</a></span>Gate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,8 +130,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">Gate::Gate </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>open</em></td><td>)</td>
+          <td class="paramname"><em>open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -140,6 +150,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">open</td><td>True if the gate should initially be open; false otherwise. </td></tr>
+    <tr><td class="paramname">id</td><td>The ID to uniquely identify the gate. </td></tr>
   </table>
   </dd>
 </dl>

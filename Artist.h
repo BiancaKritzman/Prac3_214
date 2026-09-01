@@ -27,20 +27,6 @@ class Artist : public MusicZone {
         Artist(std::string zoneName, bool isLive, std::string artistName, std::string genre);
 
         /**
-         * @brief Returns the finishing time of the performance.
-         *
-         * @return The scheduled finishing time.
-         */
-        std::string getFinishTime();
-
-        /**
-         * @brief Returns the starting time of the performance.
-         *
-         * @return The scheduled starting time.
-         */
-        std::string getStartTime();
-
-        /**
          * @brief Displays information about the performing artist.
          */
         void describe() override;
